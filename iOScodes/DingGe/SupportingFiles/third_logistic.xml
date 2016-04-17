@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<opencv_ml_lr>
+  <format>3</format>
+  <classifier>"Logisitic Regression Classifier"</classifier>
+  <alpha>1.0000000000000000e-03</alpha>
+  <iterations>1000</iterations>
+  <norm>1</norm>
+  <train_method>0</train_method>
+  <learnt_thetas type_id="opencv-matrix">
+    <rows>3</rows>
+    <cols>5</cols>
+    <dt>f</dt>
+    <data>
+      -5.83329145e-03 -6.34015014e-04 -9.94125847e-04 -5.97187376e-04 0.
+      1.82292960e-03 4.25550752e-05 3.70991882e-04 2.09023550e-04 0.
+      -2.73428904e-03 -5.80919383e-04 -4.25282604e-04 -2.39487257e-04 0.</data></learnt_thetas>
+  <n_labels type_id="opencv-matrix">
+    <rows>3</rows>
+    <cols>1</cols>
+    <dt>i</dt>
+    <data>
+      0 1 2</data></n_labels>
+  <o_labels type_id="opencv-matrix">
+    <rows>3</rows>
+    <cols>1</cols>
+    <dt>i</dt>
+    <data>
+      1 2 3</data></o_labels></opencv_ml_lr>
+</opencv_storage>
