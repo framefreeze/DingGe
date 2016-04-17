@@ -6,7 +6,7 @@
 -------------
 
 > 关于我们，欢迎关注  
-  http://kevinfeng.name/test/main.html 或者 dgw36@buaa.edu.com
+  http://kevinfeng.name/test/main.html 或者 dingge@ourmail.cn
 
 手机摄影爱好者的选择，让我们共建一个优秀的摄影App
 
