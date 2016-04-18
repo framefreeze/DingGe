@@ -19,8 +19,8 @@ class settingsView: UIViewController,UITableViewDataSource,UITableViewDelegate {
         super.viewDidLoad()
         settingTableView.dataSource = self
         // Do any additional setup after loading the view.
-        settingDataDictionary = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("settingData", withExtension: "plist")!)
-        hideSettingSwitch = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("hideSettingSwitch", withExtension: "plist")!)
+        settingDataDictionary = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("SupportingFiles/settingData", withExtension: "plist")!)
+        hideSettingSwitch = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("SupportingFiles/hideSettingSwitch", withExtension: "plist")!)
     }
 
     override func didReceiveMemoryWarning() {

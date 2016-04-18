@@ -25,27 +25,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmp1" translatesAutoresizingMaskIntoConstraints="NO" id="XD4-sd-Mzx">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="495"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="566"/>
                                     </imageView>
                                     <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RoJ-1S-3DU">
-                                        <rect key="frame" x="0.0" y="495" width="600" height="105"/>
+                                        <rect key="frame" x="0.0" y="566" width="600" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aG-ML-b0W">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="105"/>
-                                                <state key="normal" image="picWall"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                                <state key="normal" title="照片墙">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf7-fb-VH9">
-                                                <rect key="frame" x="200" y="0.0" width="200" height="105"/>
-                                                <state key="normal" image="takePhoto"/>
+                                                <rect key="frame" x="200" y="0.0" width="200" height="34"/>
+                                                <state key="normal" title="拍照">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <segue destination="P1T-LC-0xx" kind="presentation" id="Zg5-QE-EVv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW0-kx-gYr">
-                                                <rect key="frame" x="400" y="0.0" width="200" height="105"/>
+                                                <rect key="frame" x="400" y="0.0" width="200" height="34"/>
                                                 <state key="normal" title="设置"/>
                                                 <connections>
-                                                    <segue destination="6Gb-TX-280" kind="modal" id="EGo-k6-e82"/>
+                                                    <segue destination="6ge-Pq-WD1" kind="modal" id="ykr-ZN-M8v"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -65,6 +69,7 @@
                             <constraint firstAttribute="bottom" secondItem="YHn-aL-yD7" secondAttribute="bottom" id="P2j-l9-u93"/>
                             <constraint firstItem="hwJ-sW-5pY" firstAttribute="top" secondItem="5Po-Eb-JiI" secondAttribute="top" id="VrW-Ld-QQB"/>
                             <constraint firstAttribute="trailing" secondItem="YHn-aL-yD7" secondAttribute="trailing" id="Yce-F6-2tR"/>
+                            <constraint firstAttribute="bottom" secondItem="hwJ-sW-5pY" secondAttribute="bottom" id="eSO-hB-zpV"/>
                             <constraint firstItem="YHn-aL-yD7" firstAttribute="leading" secondItem="5Po-Eb-JiI" secondAttribute="leading" id="vYb-fF-HP1"/>
                             <constraint firstAttribute="trailing" secondItem="hwJ-sW-5pY" secondAttribute="trailing" id="w0J-Ki-8zi"/>
                             <constraint firstItem="YHn-aL-yD7" firstAttribute="top" secondItem="5Po-Eb-JiI" secondAttribute="top" id="xXn-m7-gg4"/>
@@ -78,6 +83,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="234" y="363.99999999999994"/>
+        </scene>
+        <!--Settings View-->
+        <scene sceneID="SaC-mE-KvC">
+            <objects>
+                <viewController id="6ge-Pq-WD1" customClass="settingsView" customModule="DingGe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YI9-du-Tu0"/>
+                        <viewControllerLayoutGuide type="bottom" id="XdU-WF-eSo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JqC-2e-8jz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t4j-t5-J42">
+                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingTableViewCell" id="hAK-YJ-9QJ">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hAK-YJ-9QJ" id="A3H-mx-y9Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zsM-2x-pBc">
+                                                    <rect key="frame" x="276" y="4" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYP-mz-9yK">
+                                                    <rect key="frame" x="8" y="11" width="186" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="settingTableView" destination="t4j-t5-J42" id="TgQ-Ar-AOc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4k-hM-X1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="646" y="1184"/>
         </scene>
         <!--renwu shitu -->
         <scene sceneID="5gB-Tm-cdH">
@@ -204,63 +257,10 @@
             </objects>
             <point key="canvasLocation" x="1267" y="363.99999999999994"/>
         </scene>
-        <!--Settings View-->
-        <scene sceneID="5wI-Id-M5e">
-            <objects>
-                <viewController id="6Gb-TX-280" customClass="settingsView" customModule="DingGe" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="R5F-Um-xtc"/>
-                        <viewControllerLayoutGuide type="bottom" id="iIn-Y3-kF6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MRO-bj-RrS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TEo-vR-e3X">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingTableViewCell" id="h0f-L6-mFL">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h0f-L6-mFL" id="NlK-2Z-xHd">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="btn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Dd-G7-RzC">
-                                                    <rect key="frame" x="8" y="11" width="239" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hb9-9p-mvR">
-                                                    <rect key="frame" x="161" y="6" width="51" height="31"/>
-                                                    <connections>
-                                                        <action selector="settingSwitchValueChange:" destination="6Gb-TX-280" eventType="valueChanged" id="Zru-UL-Gc4"/>
-                                                    </connections>
-                                                </switch>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="settingTableView" destination="TEo-vR-e3X" id="UId-YH-hfO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmq-sJ-N4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="870" y="1046"/>
-        </scene>
     </scenes>
     <resources>
         <image name="cc30" width="30" height="30"/>
         <image name="pRB45" width="45" height="45"/>
-        <image name="picWall" width="111" height="105"/>
-        <image name="takePhoto" width="108" height="111"/>
         <image name="tmp1" width="746" height="1238"/>
     </resources>
 </document>
