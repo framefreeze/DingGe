@@ -15,11 +15,11 @@ var Score = 0.0
 class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDelegate{
     @IBOutlet weak var cameraScoreLabel: UILabel!//打分类 显示分数
     @IBOutlet weak var cameraUIView: UIImageView!//显示图片
-    @IBOutlet var filterButtonContainer: UIView!// 滤镜容器
+//    @IBOutlet var filterButtonContainer: UIView!// 滤镜容器
     @IBOutlet var cameraBackButton: UIButton!//返回按钮
     @IBOutlet var cameraRecordsButton: UIButton!//拍照按钮
 //    @IBOutlet var cameraProgressView: UIProgressView!//打分进度条(暂时不用）
-    @IBOutlet var cameraFilterButton: UIButton!
+    @IBOutlet var cameraFilterButton: UIButton!//滤镜按钮
     @IBOutlet var cameraScorebar: UIView!
     var cameraCaptureSession:AVCaptureSession!//拍照序列
     var isFilterOpen = false;
@@ -57,7 +57,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         //计时器，需要再看
         cmm = CMMotionManager()
         CPhoto=cameraPhoto()
-        filterButtonContainer.hidden = true
+//        filterButtonContainer.hidden = true
 //        cameraProgressView.progress = 0.5(横向进度条暂停使用）
     }
     
@@ -89,7 +89,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if(isFilterOpen){
-            filterButtonContainer.hidden=true;
+//            filterButtonContainer.hidden=true;
             isFilterOpen=false;
         }
         else{
@@ -105,7 +105,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //    @IBAction func switchFilters(sender: AnyObject) {
 //    }
     @IBAction func openFilters(sender: AnyObject) {
-        filterButtonContainer.hidden=false
+//        filterButtonContainer.hidden=false
         isFilterOpen=true;
     }
     @IBAction func applyFilter(sender: UIButton) {//使用滤镜
