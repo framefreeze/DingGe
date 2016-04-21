@@ -25,15 +25,16 @@ class ViewController: UIViewController,UIScrollViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initFirstLaunchView()
+//        initFirstLaunchView()
 //        firstLaunchView.hidden = true
-        firstLaunchView.hidden = true
-        indexStackView.hidden = false
-//        if(NSUserDefaults.standardUserDefaults().boolForKey("isFirstLaunch")as Bool!==false){
-//            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isFirstLaunch")
-//            initFirstLaunchView()
-//            firstLaunchView.hidden = false
-//        }
+//        firstLaunchView.hidden = true
+//        indexStackView.hidden = false
+        if(NSUserDefaults.standardUserDefaults().boolForKey("isFirstLaunch")as Bool!==false){
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isFirstLaunch")
+            initFirstLaunchView()
+            firstLaunchView.hidden = false
+            indexStackView.hidden = true
+        }
 //         Do any additional setup after loading the view, typically from a nib.
     }
     func initFirstLaunchView() {
@@ -63,7 +64,7 @@ class ViewController: UIViewController,UIScrollViewDelegate{
         firstLaunchView.insertSubview(firstLaunchPageCtrl, aboveSubview: firstLaunchScrollView)
     }
     func btnclick(){
-        firstLaunchView.hidden=true
+        firstLaunchView.hidden = true
         indexStackView.hidden = false
     }
     func scrollViewDidScroll(scrollView: UIScrollView) {
