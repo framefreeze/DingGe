@@ -109,7 +109,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYP-mz-9yK">
                                                     <rect key="frame" x="8" y="11" width="186" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -160,11 +160,14 @@
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk1-fd-P5Z">
                                                 <rect key="frame" x="295" y="-1" width="29" height="31"/>
                                                 <state key="normal" image="switchLen"/>
+                                                <connections>
+                                                    <action selector="SwitchLens:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="qO7-Hx-rj0"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="分数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-te-HK1">
                                                 <rect key="frame" x="209" y="5" width="51" height="21"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -243,6 +246,7 @@
                         <outlet property="cameraFilterButton" destination="Z14-wu-55c" id="1ud-1l-iVf"/>
                         <outlet property="cameraRecordsButton" destination="Qew-Hd-xlb" id="kJm-L7-SrN"/>
                         <outlet property="cameraScoreLabel" destination="NGI-te-HK1" id="Zxy-Fk-5dg"/>
+                        <outlet property="cameraScorebar" destination="PLL-Ms-2dS" id="bww-HP-U8U"/>
                         <outlet property="cameraUIView" destination="Pdi-Ju-FlG" id="zah-m0-tqH"/>
                     </connections>
                 </viewController>
