@@ -22,68 +22,63 @@
                                 <rect key="frame" x="0.0" y="236" width="600" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hwJ-sW-5pY">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBackground" translatesAutoresizingMaskIntoConstraints="NO" id="xbG-Lo-Wzl">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RoJ-1S-3DU">
+                                <rect key="frame" x="28" y="236" width="600" height="87"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmp1" translatesAutoresizingMaskIntoConstraints="NO" id="XD4-sd-Mzx">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="566"/>
-                                    </imageView>
-                                    <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RoJ-1S-3DU">
-                                        <rect key="frame" x="0.0" y="566" width="600" height="34"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aG-ML-b0W">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
-                                                <state key="normal" title="照片墙">
-                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf7-fb-VH9">
-                                                <rect key="frame" x="200" y="0.0" width="200" height="34"/>
-                                                <state key="normal" title="拍照">
-                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="O4O-Kr-gC8" kind="modal" id="4ve-0p-oAB"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW0-kx-gYr">
-                                                <rect key="frame" x="400" y="0.0" width="200" height="34"/>
-                                                <state key="normal" title="设置"/>
-                                                <connections>
-                                                    <segue destination="6ge-Pq-WD1" kind="modal" id="ykr-ZN-M8v"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Uf7-fb-VH9" firstAttribute="width" secondItem="7aG-ML-b0W" secondAttribute="width" id="4oR-mG-JcD"/>
-                                            <constraint firstItem="PW0-kx-gYr" firstAttribute="width" secondItem="7aG-ML-b0W" secondAttribute="width" id="FN9-iG-qce"/>
-                                        </constraints>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aG-ML-b0W">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="87"/>
+                                        <state key="normal" image="gallery">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf7-fb-VH9">
+                                        <rect key="frame" x="200" y="0.0" width="200" height="87"/>
+                                        <state key="normal" image="mainPhoto">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="O4O-Kr-gC8" kind="modal" id="4ve-0p-oAB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW0-kx-gYr">
+                                        <rect key="frame" x="400" y="0.0" width="200" height="87"/>
+                                        <state key="normal" image="settings"/>
+                                        <connections>
+                                            <segue destination="6ge-Pq-WD1" kind="modal" id="ykr-ZN-M8v"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.3020731921" green="0.92602589089999998" blue="0.96050182910000004" alpha="0.97473060339999995" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Uf7-fb-VH9" firstAttribute="width" secondItem="7aG-ML-b0W" secondAttribute="width" id="4oR-mG-JcD"/>
+                                    <constraint firstItem="PW0-kx-gYr" firstAttribute="width" secondItem="7aG-ML-b0W" secondAttribute="width" id="FN9-iG-qce"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hwJ-sW-5pY" firstAttribute="leading" secondItem="5Po-Eb-JiI" secondAttribute="leading" id="1ah-Az-OGw"/>
-                            <constraint firstAttribute="bottom" secondItem="RoJ-1S-3DU" secondAttribute="bottom" id="4Cv-xq-uHh"/>
+                            <constraint firstAttribute="trailing" secondItem="xbG-Lo-Wzl" secondAttribute="trailing" id="BPs-G5-dDc"/>
                             <constraint firstAttribute="bottom" secondItem="YHn-aL-yD7" secondAttribute="bottom" id="P2j-l9-u93"/>
-                            <constraint firstItem="hwJ-sW-5pY" firstAttribute="top" secondItem="5Po-Eb-JiI" secondAttribute="top" id="VrW-Ld-QQB"/>
+                            <constraint firstItem="xbG-Lo-Wzl" firstAttribute="leading" secondItem="5Po-Eb-JiI" secondAttribute="leading" id="X8c-U2-rg2"/>
                             <constraint firstAttribute="trailing" secondItem="YHn-aL-yD7" secondAttribute="trailing" id="Yce-F6-2tR"/>
-                            <constraint firstAttribute="bottom" secondItem="hwJ-sW-5pY" secondAttribute="bottom" id="eSO-hB-zpV"/>
+                            <constraint firstAttribute="trailing" secondItem="RoJ-1S-3DU" secondAttribute="trailing" id="ZM2-4B-Xko"/>
+                            <constraint firstItem="xbG-Lo-Wzl" firstAttribute="top" secondItem="5Po-Eb-JiI" secondAttribute="top" constant="20" id="hSi-9t-6C4"/>
+                            <constraint firstItem="RoJ-1S-3DU" firstAttribute="top" secondItem="5Po-Eb-JiI" secondAttribute="top" constant="240" id="jOh-gb-Yaz"/>
+                            <constraint firstAttribute="bottom" secondItem="xbG-Lo-Wzl" secondAttribute="bottom" id="qNi-Q1-AaO"/>
                             <constraint firstItem="YHn-aL-yD7" firstAttribute="leading" secondItem="5Po-Eb-JiI" secondAttribute="leading" id="vYb-fF-HP1"/>
-                            <constraint firstAttribute="trailing" secondItem="hwJ-sW-5pY" secondAttribute="trailing" id="w0J-Ki-8zi"/>
+                            <constraint firstItem="RoJ-1S-3DU" firstAttribute="leading" secondItem="5Po-Eb-JiI" secondAttribute="leading" id="wMb-x9-i3t"/>
                             <constraint firstItem="YHn-aL-yD7" firstAttribute="top" secondItem="5Po-Eb-JiI" secondAttribute="top" id="xXn-m7-gg4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="firstLaunchView" destination="YHn-aL-yD7" id="PU4-UW-j4l"/>
-                        <outlet property="indexStackView" destination="hwJ-sW-5pY" id="7Nf-lf-LsH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="363.99999999999994"/>
+            <point key="canvasLocation" x="234" y="363"/>
         </scene>
         <!--Settings View-->
         <scene sceneID="SaC-mE-KvC">
@@ -114,7 +109,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYP-mz-9yK">
                                                     <rect key="frame" x="8" y="11" width="186" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -165,11 +160,14 @@
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk1-fd-P5Z">
                                                 <rect key="frame" x="295" y="-1" width="29" height="31"/>
                                                 <state key="normal" image="switchLen"/>
+                                                <connections>
+                                                    <action selector="SwitchLens:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="qO7-Hx-rj0"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="分数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-te-HK1">
                                                 <rect key="frame" x="209" y="5" width="51" height="21"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -192,37 +190,33 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRN-sX-6en">
                                         <rect key="frame" x="0.0" y="489" width="600" height="92"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zi4-3A-vbQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEj-Pe-0lX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="92"/>
-                                                        <state key="normal" image="cameraGallery"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qew-Hd-xlb">
-                                                        <rect key="frame" x="200" y="0.0" width="200" height="92"/>
-                                                        <state key="normal" image="takePhoto"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z14-wu-55c">
-                                                        <rect key="frame" x="400" y="0.0" width="200" height="92"/>
-                                                        <state key="normal" image="filter"/>
-                                                        <connections>
-                                                            <action selector="openFilters:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="FVY-VR-mxk"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="Z14-wu-55c" firstAttribute="width" secondItem="xEj-Pe-0lX" secondAttribute="width" id="6hv-9r-aBd"/>
-                                                    <constraint firstItem="Qew-Hd-xlb" firstAttribute="width" secondItem="xEj-Pe-0lX" secondAttribute="width" id="nNa-pn-MTV"/>
-                                                </constraints>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEj-Pe-0lX">
+                                                <rect key="frame" x="0.0" y="-3" width="125" height="92"/>
+                                                <state key="normal" image="cameraGallery"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qew-Hd-xlb">
+                                                <rect key="frame" x="139" y="0.0" width="125" height="92"/>
+                                                <state key="normal" image="takePhoto"/>
+                                                <connections>
+                                                    <action selector="takePicture:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="MDX-Bl-Vqz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z14-wu-55c">
+                                                <rect key="frame" x="270" y="-3" width="125" height="92"/>
+                                                <state key="normal" image="filter"/>
+                                                <connections>
+                                                    <action selector="openFilters:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="FVY-VR-mxk"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.75686274509999996" green="0.80392156859999997" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="Zi4-3A-vbQ" firstAttribute="leading" secondItem="uRN-sX-6en" secondAttribute="leading" id="ZMc-XM-xyt"/>
-                                            <constraint firstAttribute="trailing" secondItem="Zi4-3A-vbQ" secondAttribute="trailing" id="q3F-3m-EP8"/>
-                                            <constraint firstItem="Zi4-3A-vbQ" firstAttribute="top" secondItem="uRN-sX-6en" secondAttribute="top" id="z9G-7w-FiD"/>
-                                            <constraint firstAttribute="bottom" secondItem="Zi4-3A-vbQ" secondAttribute="bottom" id="zGF-YR-tdx"/>
+                                            <constraint firstItem="Z14-wu-55c" firstAttribute="leading" secondItem="uRN-sX-6en" secondAttribute="leading" constant="287" id="3dg-4J-5Ct"/>
+                                            <constraint firstItem="Qew-Hd-xlb" firstAttribute="centerY" secondItem="uRN-sX-6en" secondAttribute="centerY" id="4ho-ZK-Mrc"/>
+                                            <constraint firstItem="Qew-Hd-xlb" firstAttribute="centerY" secondItem="xEj-Pe-0lX" secondAttribute="centerY" id="Ub2-7A-qcB"/>
+                                            <constraint firstItem="Z14-wu-55c" firstAttribute="centerY" secondItem="Qew-Hd-xlb" secondAttribute="centerY" id="dxR-fg-QAF"/>
+                                            <constraint firstItem="Qew-Hd-xlb" firstAttribute="centerX" secondItem="uRN-sX-6en" secondAttribute="centerX" id="mCh-bH-LHs"/>
+                                            <constraint firstItem="xEj-Pe-0lX" firstAttribute="leading" secondItem="uRN-sX-6en" secondAttribute="leading" constant="35" id="pEb-Oq-p4R"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -252,8 +246,8 @@
                         <outlet property="cameraFilterButton" destination="Z14-wu-55c" id="1ud-1l-iVf"/>
                         <outlet property="cameraRecordsButton" destination="Qew-Hd-xlb" id="kJm-L7-SrN"/>
                         <outlet property="cameraScoreLabel" destination="NGI-te-HK1" id="Zxy-Fk-5dg"/>
+                        <outlet property="cameraScorebar" destination="PLL-Ms-2dS" id="bww-HP-U8U"/>
                         <outlet property="cameraUIView" destination="Pdi-Ju-FlG" id="zah-m0-tqH"/>
-                        <outlet property="filterButtonContainer" destination="Z14-wu-55c" id="ars-7w-OM4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJd-A4-eiN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -266,8 +260,11 @@
         <image name="cameraGallery" width="56" height="53"/>
         <image name="filter" width="52" height="50"/>
         <image name="flashOpen" width="47" height="39"/>
+        <image name="gallery" width="72" height="64"/>
+        <image name="mainBackground" width="375" height="667"/>
+        <image name="mainPhoto" width="90" height="87"/>
+        <image name="settings" width="59" height="61"/>
         <image name="switchLen" width="29" height="31"/>
         <image name="takePhoto" width="54" height="56"/>
-        <image name="tmp1" width="746" height="1238"/>
     </resources>
 </document>
