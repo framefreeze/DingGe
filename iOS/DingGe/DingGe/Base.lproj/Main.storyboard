@@ -40,7 +40,7 @@
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="O4O-Kr-gC8" kind="modal" id="4ve-0p-oAB"/>
+                                            <segue destination="HU4-wD-kGd" kind="modal" id="UG7-4K-rSW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW0-kx-gYr">
@@ -149,20 +149,10 @@
                                             <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-0Z-Q0p">
                                                 <rect key="frame" x="12" y="-4" width="47" height="39"/>
                                                 <state key="normal" image="cameraBack"/>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="modal" id="TpV-UC-O31"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mB-ZA-tcP">
                                                 <rect key="frame" x="107" y="-4" width="47" height="39"/>
                                                 <state key="normal" image="flashOpen"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk1-fd-P5Z">
-                                                <rect key="frame" x="295" y="-1" width="29" height="31"/>
-                                                <state key="normal" image="switchLen"/>
-                                                <connections>
-                                                    <action selector="SwitchLens:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="qO7-Hx-rj0"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="分数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-te-HK1">
                                                 <rect key="frame" x="209" y="5" width="51" height="21"/>
@@ -170,6 +160,13 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk1-fd-P5Z">
+                                                <rect key="frame" x="295" y="-1" width="29" height="31"/>
+                                                <state key="normal" image="switchLen"/>
+                                                <connections>
+                                                    <action selector="SwitchLens:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="qO7-Hx-rj0"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.75686274509999996" green="0.80392156859999997" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -253,6 +250,145 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJd-A4-eiN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1125" y="-109"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="Zku-5a-IEG">
+            <objects>
+                <viewController title="Camera" id="HU4-wD-kGd" customClass="cameraViewController" customModule="DingGe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y3h-h5-8IV"/>
+                        <viewControllerLayoutGuide type="bottom" id="YJT-VL-1SA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HJT-RF-feQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFn-G8-arg" userLabel="cameraView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.54901963470000004" green="0.77647066119999997" blue="0.2470588386" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kct-aB-qKd">
+                                <rect key="frame" x="53" y="262" width="493" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8l-OL-H0y">
+                                        <rect key="frame" x="265" y="274" width="69" height="52"/>
+                                        <state key="normal" image="cameraBack"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lb9-Yd-mWg">
+                                        <rect key="frame" x="262" y="274" width="75" height="52"/>
+                                        <color key="backgroundColor" red="0.67058825489999996" green="0.67058825489999996" blue="0.67058825489999996" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                                        <state key="normal" image="flashOpen">
+                                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeFlashMode:" destination="HU4-wD-kGd" eventType="touchUpInside" id="fDR-gg-1Xy"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xed-qY-kcm">
+                                        <rect key="frame" x="274" y="283.5" width="51" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zo-g0-u4v">
+                                        <rect key="frame" x="282" y="277.5" width="35" height="46.5"/>
+                                        <color key="backgroundColor" red="0.67058825489999996" green="0.67058825489999996" blue="0.67058825489999996" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                                        <state key="normal" image="switchLen">
+                                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeCameraDevice:" destination="HU4-wD-kGd" eventType="touchUpInside" id="vCy-qA-gKO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75686274509999996" green="0.80392156859999997" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="xed-qY-kcm" firstAttribute="centerY" secondItem="f8l-OL-H0y" secondAttribute="centerY" id="Hbw-zi-jiv"/>
+                                    <constraint firstItem="3zo-g0-u4v" firstAttribute="leading" secondItem="kct-aB-qKd" secondAttribute="leading" constant="320" id="Ipc-4u-gGq"/>
+                                    <constraint firstItem="lb9-Yd-mWg" firstAttribute="leading" secondItem="kct-aB-qKd" secondAttribute="leading" constant="75" id="e6f-GY-b9D"/>
+                                    <constraint firstItem="3zo-g0-u4v" firstAttribute="centerY" secondItem="f8l-OL-H0y" secondAttribute="centerY" id="lS6-Bw-Nna"/>
+                                    <constraint firstItem="f8l-OL-H0y" firstAttribute="leading" secondItem="kct-aB-qKd" secondAttribute="leading" constant="25" id="qPQ-pC-Akp"/>
+                                    <constraint firstItem="f8l-OL-H0y" firstAttribute="centerY" secondItem="lb9-Yd-mWg" secondAttribute="centerY" id="rNO-BQ-4R1"/>
+                                    <constraint firstItem="xed-qY-kcm" firstAttribute="leading" secondItem="kct-aB-qKd" secondAttribute="leading" constant="200" id="z6K-yE-Fdh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2p9-mg-Bor">
+                                <rect key="frame" x="275" y="530" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.54901963470000004" green="0.77647066119999997" blue="0.2470588386" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lWU-9b-WYE"/>
+                                    <constraint firstAttribute="width" constant="50" id="qjH-MJ-Wrq"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="HU4-wD-kGd" eventType="touchUpInside" id="8tY-hJ-Zed"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtZ-bn-a7w">
+                                <rect key="frame" x="4" y="84" width="592" height="512"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.46666669849999998" alpha="0.5" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.36078432199999999" green="0.36078432199999999" blue="0.36078432199999999" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="askForCameraPermissions:" destination="HU4-wD-kGd" eventType="touchUpInside" id="z6D-zl-Ee9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap here to enable camera access and take great pictures" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6r-LV-NsO">
+                                <rect key="frame" x="4" y="84" width="592" height="512"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.36078432199999999" green="0.36078432199999999" blue="0.36078432199999999" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="F6r-LV-NsO" firstAttribute="bottom" secondItem="BtZ-bn-a7w" secondAttribute="bottom" id="5Fa-W6-5MZ"/>
+                            <constraint firstAttribute="trailing" secondItem="DFn-G8-arg" secondAttribute="trailing" id="HPH-pH-NlR"/>
+                            <constraint firstItem="F6r-LV-NsO" firstAttribute="leading" secondItem="BtZ-bn-a7w" secondAttribute="leading" id="I3o-38-hWb"/>
+                            <constraint firstItem="YJT-VL-1SA" firstAttribute="top" secondItem="2p9-mg-Bor" secondAttribute="bottom" constant="20" id="LNW-1N-61j"/>
+                            <constraint firstAttribute="trailing" secondItem="kct-aB-qKd" secondAttribute="trailing" id="M4H-XJ-ej9"/>
+                            <constraint firstAttribute="centerX" secondItem="2p9-mg-Bor" secondAttribute="centerX" id="NpX-fR-EFF"/>
+                            <constraint firstItem="F6r-LV-NsO" firstAttribute="top" secondItem="BtZ-bn-a7w" secondAttribute="top" id="OAe-0v-HDv"/>
+                            <constraint firstItem="BtZ-bn-a7w" firstAttribute="bottom" secondItem="DFn-G8-arg" secondAttribute="bottom" constant="-4" id="S8Y-4F-sUX"/>
+                            <constraint firstItem="kct-aB-qKd" firstAttribute="leading" secondItem="HJT-RF-feQ" secondAttribute="leading" id="SkC-vO-cOA"/>
+                            <constraint firstItem="YJT-VL-1SA" firstAttribute="top" secondItem="DFn-G8-arg" secondAttribute="bottom" id="brd-Lz-qyE"/>
+                            <constraint firstAttribute="bottom" secondItem="kct-aB-qKd" secondAttribute="bottom" constant="605" id="gMf-8J-31C"/>
+                            <constraint firstItem="F6r-LV-NsO" firstAttribute="trailing" secondItem="BtZ-bn-a7w" secondAttribute="trailing" id="kAJ-aN-gpo"/>
+                            <constraint firstItem="DFn-G8-arg" firstAttribute="top" secondItem="HJT-RF-feQ" secondAttribute="top" id="nEJ-JG-OA7"/>
+                            <constraint firstItem="DFn-G8-arg" firstAttribute="leading" secondItem="HJT-RF-feQ" secondAttribute="leading" id="sMs-mN-Y7J"/>
+                            <constraint firstItem="kct-aB-qKd" firstAttribute="top" secondItem="HJT-RF-feQ" secondAttribute="top" constant="20" id="uZK-Tn-eVS"/>
+                            <constraint firstItem="BtZ-bn-a7w" firstAttribute="leading" secondItem="HJT-RF-feQ" secondAttribute="leading" constant="4" id="vTY-oa-xq1"/>
+                            <constraint firstAttribute="trailing" secondItem="BtZ-bn-a7w" secondAttribute="trailing" constant="4" id="wbF-Zl-iYs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5bx-FN-pyu"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="askForPermissionsButton" destination="BtZ-bn-a7w" id="aC0-tQ-we8"/>
+                        <outlet property="askForPermissionsLabel" destination="F6r-LV-NsO" id="9UY-iw-Ldi"/>
+                        <outlet property="cameraButton" destination="2p9-mg-Bor" id="Xif-0E-RVv"/>
+                        <outlet property="cameraView" destination="DFn-G8-arg" id="h2w-LX-gSe"/>
+                        <outlet property="flashModeButton" destination="lb9-Yd-mWg" id="nER-RG-pHP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cqq-Av-emm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669" y="734"/>
         </scene>
     </scenes>
     <resources>
