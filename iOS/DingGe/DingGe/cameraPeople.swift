@@ -27,6 +27,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     var photoScore = 0 as Int
     var cv = opencv()//cv类
     var filter:CIFilter!
+//    var isFrontLens:Bool!
     lazy var cameraCIContext: CIContext = {
         let eaglContext = EAGLContext(API: EAGLRenderingAPI.OpenGLES2)
         let options = [kCIContextWorkingColorSpace : NSNull()]
@@ -142,6 +143,9 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         let cameraQueue = dispatch_queue_create("VideoQueue", DISPATCH_QUEUE_SERIAL)
         cameraDataOutput.setSampleBufferDelegate(self ,queue: cameraQueue)
         cameraCaptureSession.commitConfiguration()//??????
+        
+//        isFrontLens = false
+        
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -166,7 +170,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     }
     
     @IBAction func SwitchLens(sender: AnyObject) {//切换镜头
-        print(0)
+//        print(0)
 //        var devices = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo)
 ////        var tmpDevice:AVCaptureDevice
 //        for device in devices{
@@ -181,14 +185,19 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
             let input = input as! AVCaptureDeviceInput
             let device = input.device
             if(device.hasMediaType(AVMediaTypeVideo)){
-                var position = self.cameraCaptureDevice.position;
+                var position = device.position
                 var newCamera:AVCaptureDevice
                 var newInput:AVCaptureDeviceInput
                 if(position == AVCaptureDevicePosition.Front){
+//                if isFrontLens == true {
                     newCamera = cameraWithPosition(AVCaptureDevicePosition.Back)
+//                    isFrontLens = false
+//                    cameraCaptureDevice = newCamera
                 }
                 else{
                     newCamera = cameraWithPosition(AVCaptureDevicePosition.Front)
+//                    isFrontLens = true
+//                    cameraCaptureDevice = newCamera
                 }
                 newInput = try! AVCaptureDeviceInput(device: newCamera)
                 self.cameraCaptureSession.beginConfiguration()
