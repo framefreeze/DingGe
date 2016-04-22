@@ -12,6 +12,8 @@ import AVFoundation
 import AssetsLibrary
 import CoreMotion
 var Score = 0.0
+var CounterOfSwitch = 0
+
 class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDelegate{
     @IBOutlet weak var cameraScoreLabel: UILabel!//打分类 显示分数
     @IBOutlet weak var cameraUIView: UIImageView!//显示图片
@@ -143,10 +145,10 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         cameraDataOutput.setSampleBufferDelegate(self ,queue: cameraQueue)
         cameraCaptureSession.commitConfiguration()//??????
     }
-    
-    override func viewDidDisappear(animated: Bool) {
-        self.cameraCaptureSession.stopRunning()
-    }
+
+//    override func viewDidUnload() {
+//        self.cameraCaptureSession.stopRunning()
+//    }
     
     func openCamera(){//启动相机
         cameraCaptureSession.startRunning()
@@ -166,7 +168,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     }
     
     @IBAction func SwitchLens(sender: AnyObject) {//切换镜头
-        print(0)
+        print(CounterOfSwitch)
 //        var devices = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo)
 ////        var tmpDevice:AVCaptureDevice
 //        for device in devices{
@@ -176,26 +178,30 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //                break;
 //            }
 //        }
+        CounterOfSwitch = CounterOfSwitch + 1
         var inputs = self.cameraCaptureSession.inputs as NSArray!
+        var position = self.cameraCaptureDevice.position;
+        var newCamera:AVCaptureDevice
+        var newInput:AVCaptureDeviceInput
+        var newOutput:AVCaptureOutput
+        if(CounterOfSwitch % 2 == 0){
+            newCamera = cameraWithPosition(AVCaptureDevicePosition.Back)
+        }
+        else{
+            newCamera = cameraWithPosition(AVCaptureDevicePosition.Front)
+        }
+
         for input in inputs{
             let input = input as! AVCaptureDeviceInput
+
             let device = input.device
             if(device.hasMediaType(AVMediaTypeVideo)){
-                var position = self.cameraCaptureDevice.position;
-                var newCamera:AVCaptureDevice
-                var newInput:AVCaptureDeviceInput
-                if(position == AVCaptureDevicePosition.Front){
-                    newCamera = cameraWithPosition(AVCaptureDevicePosition.Back)
-                }
-                else{
-                    newCamera = cameraWithPosition(AVCaptureDevicePosition.Front)
-                }
                 newInput = try! AVCaptureDeviceInput(device: newCamera)
                 self.cameraCaptureSession.beginConfiguration()
                 cameraCaptureSession.removeInput(input)
                 cameraCaptureSession.addInput(newInput)
                 cameraCaptureSession.commitConfiguration()
-                break;
+                
             }
         }
     }
