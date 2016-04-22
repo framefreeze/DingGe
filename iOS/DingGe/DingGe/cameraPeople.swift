@@ -18,9 +18,9 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //    @IBOutlet var filterButtonContainer: UIView!// 滤镜容器
     @IBOutlet var cameraBackButton: UIButton!//返回按钮
     @IBOutlet var cameraRecordsButton: UIButton!//拍照按钮
-//    @IBOutlet var cameraProgressView: UIProgressView!//打分进度条(暂时不用）
+    @IBOutlet var cameraProgressView: UIProgressView!//打分进度条(暂时不用）
+//    @IBOutlet var ScoreBarView: UIProgressView!
     @IBOutlet var cameraFilterButton: UIButton!//滤镜按钮
-    @IBOutlet var cameraScorebar: UIView!
     var cameraCaptureDevice:AVCaptureDevice!
     var cameraCaptureSession:AVCaptureSession!//拍照序列
     var isFilterOpen = false;
@@ -62,6 +62,8 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         CPhoto=cameraPhoto()
 //        filterButtonContainer.hidden = true
 //        cameraProgressView.progress = 0.5(横向进度条暂停使用）
+        cameraProgressView.transform = CGAffineTransformRotate(cameraProgressView.transform, CGFloat(-M_PI_2))
+        cameraProgressView.transform = CGAffineTransformScale(cameraProgressView.transform, CGFloat(1),CGFloat(2))
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -297,14 +299,18 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
             self.cameraUIView.image = uiimage
             
             /******横向进度条（暂时不用）******/
-//            self.cameraProgressView.setProgress(Float(Score/100), animated: true)
-//            if Score >= 50{
-//                //print(CGFloat(5 * ( 100-Score )))
-//                self.cameraProgressView.progressTintColor = UIColor(red: CGFloat(5*(100-Score)/255), green: 1, blue: 0.5, alpha: 1)
-//            }
-//            else{
-//                self.cameraProgressView.progressTintColor = UIColor(red: 1, green: CGFloat((255-5*(50-Score))/255), blue: 0.5, alpha: 1)
-//            }
+            self.cameraProgressView.setProgress(Float(Score/100), animated: true)
+            if Score >= 50{
+                //print(CGFloat(5 * ( 100-Score )))
+                self.cameraProgressView.progressTintColor = UIColor(red: CGFloat(((232-23)/50*(100-Score)+23)/255), green: CGFloat(((184-161)/50*(100-Score)+161)/255), blue: CGFloat(((99-154)/50*(100-Score)+154)/255), alpha: 1)
+            }
+            else{
+                self.cameraProgressView.progressTintColor = UIColor(red: CGFloat(((224-232)/50*(50-Score)+232)/255), green: CGFloat(((90-184)/50*(50-Score)+184)/255), blue: CGFloat(((109-99)/50*(50-Score)+99)/255), alpha: 1)
+            }
         })
     }
+    func changeScrollBar(score:Double){
+        
+    }
+    
 }

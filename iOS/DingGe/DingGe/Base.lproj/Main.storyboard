@@ -225,10 +225,9 @@
                                     <constraint firstItem="pUv-0A-f3S" firstAttribute="leading" secondItem="6pZ-UP-Bq0" secondAttribute="leading" id="ahp-f0-nXw"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLL-Ms-2dS">
-                                <rect key="frame" x="557" y="123" width="23" height="279"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9ND-Fl-6sq">
+                                <rect key="frame" x="190" y="299" width="347" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -241,9 +240,9 @@
                     <connections>
                         <outlet property="cameraBackButton" destination="cgn-0Z-Q0p" id="c23-fq-qdx"/>
                         <outlet property="cameraFilterButton" destination="Z14-wu-55c" id="1ud-1l-iVf"/>
+                        <outlet property="cameraProgressView" destination="9ND-Fl-6sq" id="ddr-Df-YNe"/>
                         <outlet property="cameraRecordsButton" destination="Qew-Hd-xlb" id="kJm-L7-SrN"/>
                         <outlet property="cameraScoreLabel" destination="NGI-te-HK1" id="Zxy-Fk-5dg"/>
-                        <outlet property="cameraScorebar" destination="PLL-Ms-2dS" id="bww-HP-U8U"/>
                         <outlet property="cameraUIView" destination="Pdi-Ju-FlG" id="zah-m0-tqH"/>
                     </connections>
                 </viewController>
