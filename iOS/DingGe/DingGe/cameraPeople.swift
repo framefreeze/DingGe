@@ -293,10 +293,13 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                         self.cameraScoreLabel.text="mid Score: \(tmp_score2)"
                     }
                     else{
-                        tmp_score = Score*30
-                        tmp_score += Double(rnd)
+                        tmp_score = 100*(Score/3);
                         tmp_score = floor(tmp_score)
                         tmp_score2 = floor(tmp_score/5)*5
+//                        tmp_score = Score*30
+//                        tmp_score += Double(rnd)
+//                        tmp_score = floor(tmp_score)
+//                        tmp_score2 = floor(tmp_score/5)*5
                         self.cameraScoreLabel.text="third Score: \(tmp_score2)"
                         
                     }

@@ -126,7 +126,7 @@ double distance(cv::Point vec1,cv::Point vec2){
 -(void)load_file{
     NSString* cascadePath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/haarcascade_frontalface_alt2" ofType:@"xml"];
     faceDetector.load([cascadePath UTF8String]);
-    NSString* knnPath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/third_KNN" ofType:@"xml"];
+    NSString* knnPath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/third_KNN_2" ofType:@"xml"];
     knn_third = cv::Algorithm::load<cv::ml::KNearest>([knnPath UTF8String]);
     NSString* knn_midPath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/mid_KNN_AKAZE" ofType:@"xml"];
     knn_mid = cv::Algorithm::load<cv::ml::KNearest>([knn_midPath UTF8String]);
