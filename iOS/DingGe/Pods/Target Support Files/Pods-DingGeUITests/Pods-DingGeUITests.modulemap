@@ -1,0 +1,6 @@
+framework module Pods_DingGeUITests {
+  umbrella header "Pods-DingGeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
