@@ -11,6 +11,8 @@
 #import <opencv2/imgproc/types_c.h>
 #import <opencv2/imgcodecs/ios.h>
 
+#include "AKAZE_tracker.h"
+
 using namespace std;
 using namespace cv;
 int fuck = 0;
@@ -25,23 +27,7 @@ double distance(cv::Point vec1,cv::Point vec2){
     return dis;
 }
 
-static cv::Mat Pca_data(cv::InputArray raw_data){
-    //    printf("Load PCA model... ");
-    NSString* pcaPath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/pca" ofType:@"xml"];
-    cv::FileStorage fs([pcaPath UTF8String], cv::FileStorage::READ);
-    
-    cv::PCA pca;
-    fs["mean"] >> pca.mean ;
-    fs["vectors"] >> pca.eigenvectors ;
-    fs["values"] >> pca.eigenvalues ;
-    fs.release();
-    //    printf("done\n");
-    
-    cv::Mat test_data;
-    pca.project(raw_data, test_data);
-    
-    return test_data;
-}
+//ios使用opencv用的类，实现图像处理的对应功能
 @interface opencv()
 {
     cv::CascadeClassifier faceDetector;
@@ -77,6 +63,7 @@ static cv::Mat Pca_data(cv::InputArray raw_data){
     Mat tmp(image.rows,image.cols,CV_8UC3,Scalar::all(255));
     return MatToUIImage(tmp);
 }
+
 -(UIImage*)track_object:(UIImage *)img{
     cv::Mat image;
     UIImageToMat(img, image);
@@ -138,7 +125,7 @@ static cv::Mat Pca_data(cv::InputArray raw_data){
     faceDetector.load([cascadePath UTF8String]);
     NSString* knnPath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/third_KNN" ofType:@"xml"];
     knn_third = cv::Algorithm::load<cv::ml::KNearest>([knnPath UTF8String]);
-    NSString* knn_midPath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/mid_KNN" ofType:@"xml"];
+    NSString* knn_midPath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/mid_KNN_AKAZE" ofType:@"xml"];
     knn_mid = cv::Algorithm::load<cv::ml::KNearest>([knn_midPath UTF8String]);
     //    svm = cv::Algorithm::load<cv::ml::SVM>("third_svm.xml");
     //    logistic = cv::Algorithm::load<cv::ml::LogisticRegression>("third_logistic.xml");
@@ -207,21 +194,47 @@ static cv::Mat Pca_data(cv::InputArray raw_data){
 }
 
 -(double)get_score_mid:(UIImage *)image{
-    double scores;
-    cv::Mat test_image,graytmp;
-    UIImageToMat(image, test_image);
-    graytmp.create(100, 100 , CV_32FC1);
-    if(test_image.channels()!= 1){
-        cvtColor(test_image, test_image, cv::COLOR_BGR2GRAY);
-    }
-    cv::resize(test_image, graytmp, graytmp.size());
-    graytmp = graytmp.reshape(1,1);
-    cv::Mat data = Pca_data(graytmp);
-    scores = knn_mid->predict(data);
+    double scores,mean_kp;
+    int kp1,kp2;
     
+    vector<Point2f> bb;
+    Ptr<AKAZE> akaze = AKAZE::create();
+    Ptr<DescriptorMatcher> matcher = DescriptorMatcher::create("FlannBased");
+    Stats stats1;
+    
+    
+    cv::Mat test_image,left_half,right_half;
+    UIImageToMat(image, test_image);
+    cv::resize(test_image, test_image, cv::Size(test_image.cols/2, test_image.rows/2));
+    
+    //prepare left and right half
+    left_half  = test_image(cv::Rect(0,0,test_image.cols/2,test_image.rows));
+    right_half = test_image(cv::Rect(test_image.cols/2-1,0,test_image.cols/2-1,test_image.rows));
+    flip(right_half,right_half,1);
+    //prepare
+    bb.push_back(Point2f(0,0));
+    bb.push_back(Point2f(left_half.cols,0));
+    bb.push_back(Point2f(left_half.cols,left_half.rows));
+    bb.push_back(Point2f(0,left_half.rows));
+    
+    Mat data(1, 3, CV_32S);
+    akaze->clear();
+    akaze->setThreshold(akaze_thresh);
+    Tracker akaze_tracker(akaze, matcher);
+    kp1 = (int)(akaze_tracker.setFrame(left_half, bb, "AKAZE", stats1)).size();
+    kp2 = (int)(akaze_tracker.process(right_half, stats1)).size();
+    mean_kp = (kp1 + kp2)/2;
+    
+    data.at<double>(0,0) = fabs(kp2-mean_kp)/mean_kp;
+    data.at<double>(0,1) = ((double)stats1.matches)/mean_kp;
+    data.at<double>(0,2) = stats1.inliers * 1.0 /mean_kp;
+
+    scores = knn_mid->predict(data);
     printf("mid score: %lf\n",scores);
     return scores;
 }
+
+//追踪后三分线打分
 -(double)get_score_after_track:(UIImage *)image{
     double score;
     Mat test_data,gray;
@@ -274,6 +287,8 @@ static cv::Mat Pca_data(cv::InputArray raw_data){
     printf("third score: %lf\n",score);
     return score;
 }
+
+//人脸追踪
 -(UIImage*)facedetc:(UIImage*)img{
     
     cv::Mat faceImage,tmp;
