@@ -48,12 +48,14 @@ double distance(cv::Point vec1,cv::Point vec2){
     return self;
 }
 -(void) change_selection:(CGPoint)point{
+    if(point.y-31 < 0 ) return;
+    
     float x,y;
     x = 2.88*point.x;
-    y = 2.88*point.y;
+    y = 2.88*(point.y-31);
     
     if( if_track == 0 ){
-        self->selection = cv::Rect(x-20,y-20,40,40);
+        self->selection = cv::Rect(x-10,y-10,20,20);
         if_track = -1;
     }
 }
@@ -74,6 +76,7 @@ double distance(cv::Point vec1,cv::Point vec2){
     const float* phranges = hranges;
     
     cv::Mat hsv, hue, mask, backproj;
+    image = image(cv::Rect(0,0,1080,1318));
     
     cvtColor(image, hsv, COLOR_BGR2HSV);
     if ( if_track != 0 ){
@@ -86,7 +89,7 @@ double distance(cv::Point vec1,cv::Point vec2){
         hue.create(hsv.size(), hsv.depth());
         mixChannels(&hsv, 1, &hue, 1, ch, 1);//取出明度通道，为什么不是mask通道
         
-        //处理图片
+        //处理图片，第一次跟踪
         if(if_track < 0){
             trackWindow = self->selection & cv::Rect(0,0,image.cols,image.rows);
             Mat roi(hue, trackWindow), maskroi(mask, trackWindow);
@@ -217,7 +220,7 @@ double distance(cv::Point vec1,cv::Point vec2){
     bb.push_back(Point2f(left_half.cols,left_half.rows));
     bb.push_back(Point2f(0,left_half.rows));
     
-    Mat data(1, 3, CV_32S);
+    Mat data(1, 3, CV_32F);
     akaze->clear();
     akaze->setThreshold(akaze_thresh);
     Tracker akaze_tracker(akaze, matcher);
@@ -225,10 +228,11 @@ double distance(cv::Point vec1,cv::Point vec2){
     kp2 = (int)(akaze_tracker.process(right_half, stats1)).size();
     mean_kp = (kp1 + kp2)/2;
     
-    data.at<double>(0,0) = fabs(kp2-mean_kp)/mean_kp;
-    data.at<double>(0,1) = ((double)stats1.matches)/mean_kp;
-    data.at<double>(0,2) = stats1.inliers * 1.0 /mean_kp;
+    data.at<float>(0,0) = fabs(kp2-mean_kp)/mean_kp;
+    data.at<float>(0,1) = ((double)stats1.matches)/mean_kp;
+    data.at<float>(0,2) = stats1.inliers * 1.0 /mean_kp;
 
+    cout << data << endl;
     scores = knn_mid->predict(data);
     printf("mid score: %lf\n",scores);
     return scores;
@@ -241,7 +245,7 @@ double distance(cv::Point vec1,cv::Point vec2){
     UIImageToMat(image, test_data);
     cvtColor(test_data,gray,CV_BGR2GRAY);
     if(trackWindow.area() < 4){
-        return 20.0 + [self get_score_mid:image];
+        return 20.01 + [self get_score_mid:image];
     }
     
     

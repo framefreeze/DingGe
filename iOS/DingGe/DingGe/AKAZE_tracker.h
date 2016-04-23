@@ -11,7 +11,7 @@
 
 
 #include  <opencv2/opencv.hpp>
-#include "stats.h"
+#include "stats.hpp"
 
 using namespace std;
 using namespace cv;
@@ -84,7 +84,7 @@ vector<KeyPoint> Tracker::process(const Mat frame, Stats& stats) //左右对称�
     
     stats.inliers = 0;
     for(unsigned i = 0; i < matched1.size(); i++) {
-        if(inlier_mask.at<uchar>(i)) {
+        if(inlier_mask.cols !=0 && inlier_mask.at<uchar>(i)) {
             stats.inliers++;
         }
     }

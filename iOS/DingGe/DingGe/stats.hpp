@@ -1,6 +1,8 @@
 #ifndef STATS_H
 #define STATS_H
 
+#include "opencv2/opencv.hpp"
+
 struct Stats
 {
     int matches;
@@ -31,9 +33,9 @@ struct Stats
     }
 };
 
-vector<Point2f> Points(vector<KeyPoint> keypoints)
+std::vector<cv::Point2f> Points(std::vector<cv::KeyPoint> keypoints)
 {
-    vector<Point2f> res;
+    std::vector<cv::Point2f> res;
     for(unsigned i = 0; i < keypoints.size(); i++) {
         res.push_back(keypoints[i].pt);
     }

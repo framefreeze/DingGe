@@ -64,7 +64,7 @@
 		0AF6186D1CC3DCD400977F4F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		0AF6186F1CC3DEB200977F4F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AF618731CC3DEEA00977F4F /* DingGe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DingGe.entitlements; sourceTree = "<group>"; };
-		21C17BE81CCB65BD00ED953C /* stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stats.h; sourceTree = "<group>"; };
+		21C17BE81CCB65BD00ED953C /* stats.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stats.hpp; sourceTree = "<group>"; };
 		21C17BE91CCB67A300ED953C /* AKAZE_tracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKAZE_tracker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,7 +121,7 @@
 		0AF618291CC3D8AA00977F4F /* DingGe */ = {
 			isa = PBXGroup;
 			children = (
-				21C17BE81CCB65BD00ED953C /* stats.h */,
+				21C17BE81CCB65BD00ED953C /* stats.hpp */,
 				0AF618731CC3DEEA00977F4F /* DingGe.entitlements */,
 				0AF618641CC3DC6900977F4F /* cameraPeople.swift */,
 				0AF618651CC3DC6900977F4F /* cameraPhoto.swift */,
