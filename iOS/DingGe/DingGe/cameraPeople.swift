@@ -25,12 +25,15 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //    @IBOutlet var ScoreBarView: UIProgressView!
     @IBOutlet var cameraFilterButton: UIButton!//滤镜按钮
 <<<<<<< HEAD
+<<<<<<< HEAD
     @IBOutlet var cameraScorebar: UIView!
     
     //cameraManager 测试
     @IBOutlet var CameraView: UIView!
     let cameraManager = CameraManager()
     
+=======
+>>>>>>> Dev
 =======
 >>>>>>> Dev
     var cameraCaptureDevice:AVCaptureDevice!
@@ -76,7 +79,12 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //        filterButtonContainer.hidden = true
 //        cameraProgressView.progress = 0.5(横向进度条暂停使用）
 <<<<<<< HEAD
+<<<<<<< HEAD
         cameraManager.addPreviewLayerToView(self.CameraView)
+=======
+        cameraProgressView.transform = CGAffineTransformRotate(cameraProgressView.transform, CGFloat(-M_PI_2))
+        cameraProgressView.transform = CGAffineTransformScale(cameraProgressView.transform, CGFloat(1),CGFloat(2))
+>>>>>>> Dev
 =======
         cameraProgressView.transform = CGAffineTransformRotate(cameraProgressView.transform, CGFloat(-M_PI_2))
         cameraProgressView.transform = CGAffineTransformScale(cameraProgressView.transform, CGFloat(1),CGFloat(2))
