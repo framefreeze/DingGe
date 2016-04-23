@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A21A42B1CCBBD8600B3139B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A21A4291CCBBD8600B3139B /* Interface.storyboard */; };
+		0A21A42D1CCBBD8600B3139B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A21A42C1CCBBD8600B3139B /* Assets.xcassets */; };
+		0A21A4341CCBBD8600B3139B /* DingGeforWahch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0A21A4331CCBBD8600B3139B /* DingGeforWahch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0A21A43B1CCBBD8600B3139B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21A43A1CCBBD8600B3139B /* InterfaceController.swift */; };
+		0A21A43D1CCBBD8600B3139B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21A43C1CCBBD8600B3139B /* ExtensionDelegate.swift */; };
+		0A21A43F1CCBBD8600B3139B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21A43E1CCBBD8600B3139B /* NotificationController.swift */; };
+		0A21A4411CCBBD8600B3139B /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21A4401CCBBD8600B3139B /* GlanceController.swift */; };
+		0A21A4431CCBBD8600B3139B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A21A4421CCBBD8600B3139B /* Assets.xcassets */; };
+		0A21A4471CCBBD8600B3139B /* DingGeforWahch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0A21A4271CCBBD8600B3139B /* DingGeforWahch.app */; };
 		0A8116E71CC7D89400842EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8116E61CC7D89400842EF7 /* Assets.xcassets */; };
 		0AF6182B1CC3D8AA00977F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF6182A1CC3D8AA00977F4F /* AppDelegate.swift */; };
 		0AF6182D1CC3D8AA00977F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF6182C1CC3D8AA00977F4F /* ViewController.swift */; };
@@ -24,6 +33,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0A21A4351CCBBD8600B3139B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AF6181F1CC3D8AA00977F4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A21A4321CCBBD8600B3139B;
+			remoteInfo = "DingGeforWahch Extension";
+		};
+		0A21A4451CCBBD8600B3139B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AF6181F1CC3D8AA00977F4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A21A4261CCBBD8600B3139B;
+			remoteInfo = DingGeforWahch;
+		};
 		0AF6183C1CC3D8AA00977F4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0AF6181F1CC3D8AA00977F4F /* Project object */;
@@ -40,7 +63,44 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0A21A44D1CCBBD8600B3139B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0A21A4341CCBBD8600B3139B /* DingGeforWahch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A21A44F1CCBBD8600B3139B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0A21A4471CCBBD8600B3139B /* DingGeforWahch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0A21A4271CCBBD8600B3139B /* DingGeforWahch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingGeforWahch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A21A42A1CCBBD8600B3139B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0A21A42C1CCBBD8600B3139B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A21A42E1CCBBD8600B3139B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A21A4331CCBBD8600B3139B /* DingGeforWahch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DingGeforWahch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A21A4391CCBBD8600B3139B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		0A21A43A1CCBBD8600B3139B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		0A21A43C1CCBBD8600B3139B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		0A21A43E1CCBBD8600B3139B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		0A21A4401CCBBD8600B3139B /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		0A21A4421CCBBD8600B3139B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A21A4441CCBBD8600B3139B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A8116E61CC7D89400842EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AF618271CC3D8AA00977F4F /* DingGe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingGe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF6182A1CC3D8AA00977F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +127,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0A21A4301CCBBD8600B3139B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0AF618241CC3D8AA00977F4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,6 +160,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A21A4281CCBBD8600B3139B /* DingGeforWahch */ = {
+			isa = PBXGroup;
+			children = (
+				0A21A4291CCBBD8600B3139B /* Interface.storyboard */,
+				0A21A42C1CCBBD8600B3139B /* Assets.xcassets */,
+				0A21A42E1CCBBD8600B3139B /* Info.plist */,
+			);
+			path = DingGeforWahch;
+			sourceTree = "<group>";
+		};
+		0A21A4371CCBBD8600B3139B /* DingGeforWahch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0A21A43A1CCBBD8600B3139B /* InterfaceController.swift */,
+				0A21A43C1CCBBD8600B3139B /* ExtensionDelegate.swift */,
+				0A21A43E1CCBBD8600B3139B /* NotificationController.swift */,
+				0A21A4401CCBBD8600B3139B /* GlanceController.swift */,
+				0A21A4421CCBBD8600B3139B /* Assets.xcassets */,
+				0A21A4441CCBBD8600B3139B /* Info.plist */,
+				0A21A4381CCBBD8600B3139B /* Supporting Files */,
+			);
+			path = "DingGeforWahch Extension";
+			sourceTree = "<group>";
+		};
+		0A21A4381CCBBD8600B3139B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A21A4391CCBBD8600B3139B /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		0AF6181E1CC3D8AA00977F4F = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +201,8 @@
 				0AF618291CC3D8AA00977F4F /* DingGe */,
 				0AF6183E1CC3D8AA00977F4F /* DingGeTests */,
 				0AF618491CC3D8AA00977F4F /* DingGeUITests */,
+				0A21A4281CCBBD8600B3139B /* DingGeforWahch */,
+				0A21A4371CCBBD8600B3139B /* DingGeforWahch Extension */,
 				0AF618281CC3D8AA00977F4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +213,8 @@
 				0AF618271CC3D8AA00977F4F /* DingGe.app */,
 				0AF6183B1CC3D8AA00977F4F /* DingGeTests.xctest */,
 				0AF618461CC3D8AA00977F4F /* DingGeUITests.xctest */,
+				0A21A4271CCBBD8600B3139B /* DingGeforWahch.app */,
+				0A21A4331CCBBD8600B3139B /* DingGeforWahch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +260,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0A21A4261CCBBD8600B3139B /* DingGeforWahch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A21A44E1CCBBD8600B3139B /* Build configuration list for PBXNativeTarget "DingGeforWahch" */;
+			buildPhases = (
+				0A21A4251CCBBD8600B3139B /* Resources */,
+				0A21A44D1CCBBD8600B3139B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A21A4361CCBBD8600B3139B /* PBXTargetDependency */,
+			);
+			name = DingGeforWahch;
+			productName = DingGeforWahch;
+			productReference = 0A21A4271CCBBD8600B3139B /* DingGeforWahch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		0A21A4321CCBBD8600B3139B /* DingGeforWahch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A21A44C1CCBBD8600B3139B /* Build configuration list for PBXNativeTarget "DingGeforWahch Extension" */;
+			buildPhases = (
+				0A21A42F1CCBBD8600B3139B /* Sources */,
+				0A21A4301CCBBD8600B3139B /* Frameworks */,
+				0A21A4311CCBBD8600B3139B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DingGeforWahch Extension";
+			productName = "DingGeforWahch Extension";
+			productReference = 0A21A4331CCBBD8600B3139B /* DingGeforWahch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		0AF618261CC3D8AA00977F4F /* DingGe */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AF6184F1CC3D8AA00977F4F /* Build configuration list for PBXNativeTarget "DingGe" */;
@@ -164,10 +301,12 @@
 				0AF618231CC3D8AA00977F4F /* Sources */,
 				0AF618241CC3D8AA00977F4F /* Frameworks */,
 				0AF618251CC3D8AA00977F4F /* Resources */,
+				0A21A44F1CCBBD8600B3139B /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0A21A4461CCBBD8600B3139B /* PBXTargetDependency */,
 			);
 			name = DingGe;
 			productName = DingGe;
@@ -220,6 +359,14 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = FrameFreeze;
 				TargetAttributes = {
+					0A21A4261CCBBD8600B3139B = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 7AVDNX29VL;
+					};
+					0A21A4321CCBBD8600B3139B = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 7AVDNX29VL;
+					};
 					0AF618261CC3D8AA00977F4F = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 7AVDNX29VL;
@@ -257,11 +404,30 @@
 				0AF618261CC3D8AA00977F4F /* DingGe */,
 				0AF6183A1CC3D8AA00977F4F /* DingGeTests */,
 				0AF618451CC3D8AA00977F4F /* DingGeUITests */,
+				0A21A4261CCBBD8600B3139B /* DingGeforWahch */,
+				0A21A4321CCBBD8600B3139B /* DingGeforWahch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0A21A4251CCBBD8600B3139B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A21A42D1CCBBD8600B3139B /* Assets.xcassets in Resources */,
+				0A21A42B1CCBBD8600B3139B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A21A4311CCBBD8600B3139B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A21A4431CCBBD8600B3139B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0AF618251CC3D8AA00977F4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +456,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0A21A42F1CCBBD8600B3139B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A21A43F1CCBBD8600B3139B /* NotificationController.swift in Sources */,
+				0A21A43D1CCBBD8600B3139B /* ExtensionDelegate.swift in Sources */,
+				0A21A43B1CCBBD8600B3139B /* InterfaceController.swift in Sources */,
+				0A21A4411CCBBD8600B3139B /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0AF618231CC3D8AA00977F4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +499,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0A21A4361CCBBD8600B3139B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A21A4321CCBBD8600B3139B /* DingGeforWahch Extension */;
+			targetProxy = 0A21A4351CCBBD8600B3139B /* PBXContainerItemProxy */;
+		};
+		0A21A4461CCBBD8600B3139B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A21A4261CCBBD8600B3139B /* DingGeforWahch */;
+			targetProxy = 0A21A4451CCBBD8600B3139B /* PBXContainerItemProxy */;
+		};
 		0AF6183D1CC3D8AA00977F4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0AF618261CC3D8AA00977F4F /* DingGe */;
@@ -335,6 +522,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0A21A4291CCBBD8600B3139B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A21A42A1CCBBD8600B3139B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		0AF6182E1CC3D8AA00977F4F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -354,6 +549,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0A21A4481CCBBD8600B3139B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DingGeforWahch_Extension;
+				INFOPLIST_FILE = DingGeforWahch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		0A21A4491CCBBD8600B3139B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DingGeforWahch_Extension;
+				INFOPLIST_FILE = DingGeforWahch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		0A21A44A1CCBBD8600B3139B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DingGeforWahch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		0A21A44B1CCBBD8600B3139B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DingGeforWahch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 		0AF6184D1CC3D8AA00977F4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -527,6 +784,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0A21A44C1CCBBD8600B3139B /* Build configuration list for PBXNativeTarget "DingGeforWahch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A21A44A1CCBBD8600B3139B /* Debug */,
+				0A21A44B1CCBBD8600B3139B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0A21A44E1CCBBD8600B3139B /* Build configuration list for PBXNativeTarget "DingGeforWahch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A21A4481CCBBD8600B3139B /* Debug */,
+				0A21A4491CCBBD8600B3139B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		0AF618221CC3D8AA00977F4F /* Build configuration list for PBXProject "DingGe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
