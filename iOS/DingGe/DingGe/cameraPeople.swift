@@ -24,18 +24,6 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     @IBOutlet var cameraProgressView: UIProgressView!//打分进度条(暂时不用）
 //    @IBOutlet var ScoreBarView: UIProgressView!
     @IBOutlet var cameraFilterButton: UIButton!//滤镜按钮
-<<<<<<< HEAD
-<<<<<<< HEAD
-    @IBOutlet var cameraScorebar: UIView!
-    
-    //cameraManager 测试
-    @IBOutlet var CameraView: UIView!
-    let cameraManager = CameraManager()
-    
-=======
->>>>>>> Dev
-=======
->>>>>>> Dev
     var cameraCaptureDevice:AVCaptureDevice!
     var cameraCaptureSession:AVCaptureSession!//拍照序列
     var isFilterOpen = false;
@@ -78,17 +66,6 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         CPhoto=cameraPhoto()
 //        filterButtonContainer.hidden = true
 //        cameraProgressView.progress = 0.5(横向进度条暂停使用）
-<<<<<<< HEAD
-<<<<<<< HEAD
-        cameraManager.addPreviewLayerToView(self.CameraView)
-=======
-        cameraProgressView.transform = CGAffineTransformRotate(cameraProgressView.transform, CGFloat(-M_PI_2))
-        cameraProgressView.transform = CGAffineTransformScale(cameraProgressView.transform, CGFloat(1),CGFloat(2))
->>>>>>> Dev
-=======
-        cameraProgressView.transform = CGAffineTransformRotate(cameraProgressView.transform, CGFloat(-M_PI_2))
-        cameraProgressView.transform = CGAffineTransformScale(cameraProgressView.transform, CGFloat(1),CGFloat(2))
->>>>>>> Dev
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -196,7 +173,6 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         return a
     }
     
-<<<<<<< HEAD
 //    @IBAction func SwitchLens(sender: AnyObject) {//切换镜头
 //        print(CounterOfSwitch)
 ////        var devices = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo)
@@ -243,47 +219,6 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 ////        }
 //        
 //    }
-=======
-    @IBAction func SwitchLens(sender: AnyObject) {//切换镜头
-//        print(0)
-//        var devices = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo)
-////        var tmpDevice:AVCaptureDevice
-//        for device in devices{
-//            let device = device as! AVCaptureDevice
-//            if device.position == AVCaptureDevicePosition.Front{
-//                cameraCaptureDevice = device
-//                break;
-//            }
-//        }
-        var inputs = self.cameraCaptureSession.inputs as NSArray!
-        for input in inputs{
-            let input = input as! AVCaptureDeviceInput
-            let device = input.device
-            if(device.hasMediaType(AVMediaTypeVideo)){
-                var position = device.position
-                var newCamera:AVCaptureDevice
-                var newInput:AVCaptureDeviceInput
-                if(position == AVCaptureDevicePosition.Front){
-//                if isFrontLens == true {
-                    newCamera = cameraWithPosition(AVCaptureDevicePosition.Back)
-//                    isFrontLens = false
-//                    cameraCaptureDevice = newCamera
-                }
-                else{
-                    newCamera = cameraWithPosition(AVCaptureDevicePosition.Front)
-//                    isFrontLens = true
-//                    cameraCaptureDevice = newCamera
-                }
-                newInput = try! AVCaptureDeviceInput(device: newCamera)
-                self.cameraCaptureSession.beginConfiguration()
-                cameraCaptureSession.removeInput(input)
-                cameraCaptureSession.addInput(newInput)
-                cameraCaptureSession.commitConfiguration()
-                break;
-            }
-        }
-    }
->>>>>>> Dev
     
         /*
          - (AVCaptureDevice *)cameraWithPosition:(AVCaptureDevicePosition)position

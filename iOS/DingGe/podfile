@@ -1,31 +1,9 @@
 # Uncomment this line to define a global platform for your project
-<<<<<<< HEAD
-<<<<<<< HEAD
 # platform :ios, ‘9.3’
 # Uncomment this line if you're using Swift
 # use_frameworks!
 use_frameworks!
 pod 'CameraManager’, '~> 2.2.2’
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Dev
-# platform :ios, '9.3'
-=======
-# platform :ios, '8.0'
->>>>>>> origin/K's-work
-# Uncomment this line if you're using Swift
-# use_frameworks!
-use_frameworks!
-pod 'CameraManager', '~> 2.2.2'
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/K's-work
-<<<<<<< HEAD
->>>>>>> Dev
-=======
->>>>>>> Dev
 target 'DingGe' do
 
 end
