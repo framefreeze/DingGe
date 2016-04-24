@@ -15,11 +15,7 @@ import WatchConnectivity
 
 var Score = 0.0
 var uiimage2:UIImage!
-<<<<<<< HEAD
-class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDelegate{
-=======
 class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDelegate, WCSessionDelegate{
->>>>>>> Dev
     @IBOutlet weak var cameraScoreLabel: UILabel!//打分类 显示分数
     @IBOutlet weak var cameraUIView: UIImageView!//显示图片
 //    @IBOutlet var filterButtonContainer: UIView!// 滤镜容器
@@ -64,12 +60,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         setupCaptureSession()
         openCamera()
         cv.load_file()//加载评分文件
-<<<<<<< HEAD
-        
-        
-=======
 
->>>>>>> Dev
         cmm = CMMotionManager()
         CPhoto=cameraPhoto()
 //        filterButtonContainer.hidden = true
@@ -135,10 +126,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         var filterName = filterNames[sender.tag]
         filter = CIFilter(name: filterName)
     }
-<<<<<<< HEAD
-    
-=======
->>>>>>> Dev
+
     func setupCaptureSession(){ //初始化相机
         cameraCaptureSession = AVCaptureSession()
         cameraCaptureSession.beginConfiguration()
@@ -263,12 +251,8 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         self.cameraCaptureSession.startRunning()
     }
     
-<<<<<<< HEAD
-    
-    func  captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {//视频流监测
-=======
+
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {//视频流监测
->>>>>>> Dev
         self.countframe = self.countframe + 1
         if self.countframe > 30000 {self.countframe = 1}
         
@@ -303,83 +287,34 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         self.cameraCIImage = outputImage
         uiimage = uiimage2
         uiimage2 = self.cv.track_object(uiimage)
-<<<<<<< HEAD
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0),{
-                dispatch_async(dispatch_get_main_queue(),{
-                    self.cameraUIView.image = uiimage2
-
-                })
-                if self.countframe % 15 == 0{
-                    Score = self.cv.get_score_after_track(uiimage);
-                    //self.cameraUIView.image = uiimage
-                    
-                }
-                dispatch_async(dispatch_get_main_queue(), {//并行线程的回收
-                    if Score >= 20.0 {
-                        tmp_score = 100*log10(10*(Score-20)+1);
-                        tmp_score = floor(tmp_score)
-                        tmp_score2 = floor(tmp_score/5)*5
-                        self.cameraScoreLabel.text="mid Score: \(tmp_score2)"
-                    }
-                    else{
-                        tmp_score = 100*(Score/3);
-                        tmp_score = floor(tmp_score)
-                        tmp_score2 = floor(tmp_score/5)*5
-//                        tmp_score = Score*30
-//                        tmp_score += Double(rnd)
-//                        tmp_score = floor(tmp_score)
-//                        tmp_score2 = floor(tmp_score/5)*5
-                        self.cameraScoreLabel.text="third Score: \(tmp_score2)"
-                        
-                    }
-                    
-                    if tmp_score == 99  {
-                        if arc4random()%20 == 10 {
-                            self.CPhoto.saveImage(self.cameraUIView.image!)
-                            uiimage = self.cv.full_white(uiimage);
-                        }
-                    }
-                    
-                    /******横向进度条变竖******/
-                    self.cameraProgressView.setProgress(Float(tmp_score/100), animated: true)
-                    if tmp_score >= 50{
-                        //print(CGFloat(5 * ( 100-Score )))
-                        self.cameraProgressView.progressTintColor = UIColor(red: CGFloat(((232-23)/50*(100-tmp_score)+23)/255), green: CGFloat(((184-161)/50*(100-tmp_score)+161)/255), blue: CGFloat(((99-154)/50*(100-tmp_score)+154)/255), alpha: 1)
-                    }
-                    else{
-                        self.cameraProgressView.progressTintColor = UIColor(red: CGFloat(((224-232)/50*(50-tmp_score)+232)/255), green: CGFloat(((90-184)/50*(50-tmp_score)+184)/255), blue: CGFloat(((109-99)/50*(50-tmp_score)+99)/255), alpha: 1)
-                    }
-
-                })
-            })
-        
-    }
-    
-    func changeScrollBar(score:Double){
-=======
-        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0),{
             dispatch_async(dispatch_get_main_queue(),{
                 self.cameraUIView.image = uiimage2
                 
             })
-            if self.countframe % 15 == 0{
+            if self.cv.If_track() && (self.countframe % 15 == 0){
                 Score = self.cv.get_score_after_track(uiimage);
+                //self.cameraUIView.image = uiimage
+                
             }
             dispatch_async(dispatch_get_main_queue(), {//并行线程的回收
-               
                 if Score >= 20.0 {
                     tmp_score = 100*log10(10*(Score-20)+1);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
-                    try! WCSession.defaultSession().updateApplicationContext(["Score":tmp_score2]);
                     self.cameraScoreLabel.text="mid Score: \(tmp_score2)"
+                }
+                else if Score == 0.0{
+                    self.cameraScoreLabel.text="Score:"
                 }
                 else{
                     tmp_score = 100*(Score/3);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
-                    try! WCSession.defaultSession().updateApplicationContext(["Score":tmp_score2]);
+                    //                        tmp_score = Score*30
+                    //                        tmp_score += Double(rnd)
+                    //                        tmp_score = floor(tmp_score)
+                    //                        tmp_score2 = floor(tmp_score/5)*5
                     self.cameraScoreLabel.text="third Score: \(tmp_score2)"
                     
                 }
@@ -403,7 +338,6 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                 
             })
         })
->>>>>>> Dev
         
     }
     

@@ -365,11 +365,11 @@
 				TargetAttributes = {
 					0A21A4261CCBBD8600B3139B = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 7AVDNX29VL;
+						DevelopmentTeam = D5HF3C53NT;
 					};
 					0A21A4321CCBBD8600B3139B = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 7AVDNX29VL;
+						DevelopmentTeam = D5HF3C53NT;
 					};
 					0AF618261CC3D8AA00977F4F = {
 						CreatedOnToolsVersion = 7.3;
@@ -561,7 +561,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = DingGeforWahch_Extension;
 				INFOPLIST_FILE = DingGeforWahch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -578,7 +578,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = DingGeforWahch_Extension;
 				INFOPLIST_FILE = DingGeforWahch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -590,10 +590,13 @@
 		0A21A44A1CCBBD8600B3139B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DingGeforWahch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -604,10 +607,13 @@
 		0A21A44B1CCBBD8600B3139B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DingGeforWahch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;

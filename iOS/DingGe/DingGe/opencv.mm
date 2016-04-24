@@ -47,6 +47,12 @@ double distance(cv::Point vec1,cv::Point vec2){
     }
     return self;
 }
+-(bool) If_track{
+    if(if_track == 0)
+        return false;
+    else
+        return true;
+}
 -(void) change_selection:(CGPoint)point{
     if(point.y-31 < 0 ) return;
     
@@ -240,13 +246,14 @@ double distance(cv::Point vec1,cv::Point vec2){
 
 //追踪后三分线打分
 -(double)get_score_after_track:(UIImage *)image{
-    double score;
+    double score,score1;
     Mat test_data,gray;
     UIImageToMat(image, test_data);
     cvtColor(test_data,gray,CV_BGR2GRAY);
-    if(trackWindow.area() < 4){
-        return 20.01 + [self get_score_mid:image];
-    }
+    //if(trackWindow.area() < 4){
+//        return 20.01 + [self get_score_mid:image];
+    //}
+    score1 = [self get_score_mid:image];
     
     
     cv::Mat getRespon(1,4,CV_32FC1);
@@ -289,7 +296,10 @@ double distance(cv::Point vec1,cv::Point vec2){
     
     score = knn_third->predict(getRespon);
     printf("third score: %lf\n",score);
-    return score;
+    if ((score/10) > score1)
+        return score;
+    else
+        return 20.0+score1;
 }
 
 //人脸追踪
