@@ -791,6 +791,7 @@
 				0A21A44B1CCBBD8600B3139B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A21A44E1CCBBD8600B3139B /* Build configuration list for PBXNativeTarget "DingGeforWahch" */ = {
 			isa = XCConfigurationList;
@@ -799,6 +800,7 @@
 				0A21A4491CCBBD8600B3139B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AF618221CC3D8AA00977F4F /* Build configuration list for PBXProject "DingGe" */ = {
 			isa = XCConfigurationList;

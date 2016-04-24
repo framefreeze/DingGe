@@ -13,8 +13,16 @@
                         <label width="136" height="107.5" alignment="left" text="99" textAlignment="center" id="L9z-w0-7J3">
                             <fontDescription key="font" type="system" pointSize="45"/>
                         </label>
-                        <button width="1" alignment="left" title="Button" id="FoN-ax-Vyz"/>
+                        <button width="1" alignment="left" title="Button" id="FoN-ax-Vyz">
+                            <connections>
+                                <action selector="takePhotoButtonClick" destination="AgC-eL-Hgc" id="mhm-Nn-X7j"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="scoreWKLabel" destination="L9z-w0-7J3" id="yrC-dN-6UB"/>
+                        <outlet property="takePhotoButton" destination="FoN-ax-Vyz" id="kfJ-TJ-ZsF"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>

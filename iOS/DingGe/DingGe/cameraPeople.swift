@@ -11,8 +11,11 @@ import UIKit
 import AVFoundation
 import AssetsLibrary
 import CoreMotion
+import WatchConnectivity
+
 var Score = 0.0
-class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDelegate{
+var uiimage2:UIImage!
+class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDelegate, WCSessionDelegate{
     @IBOutlet weak var cameraScoreLabel: UILabel!//打分类 显示分数
     @IBOutlet weak var cameraUIView: UIImageView!//显示图片
 //    @IBOutlet var filterButtonContainer: UIView!// 滤镜容器
@@ -25,6 +28,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     var cameraCaptureSession:AVCaptureSession!//拍照序列
     var isFilterOpen = false;
     var photoScore = 0 as Int
+    var countframe = 0 as Int
     var cv = opencv()//cv类
     var filter:CIFilter!
     lazy var cameraCIContext: CIContext = {
@@ -55,14 +59,18 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         setupCaptureSession()
         openCamera()
         cv.load_file()//加载评分文件
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.001, target: self, selector: Selector("updateCounter"), userInfo:nil, repeats:true);
-        //计时器，需要再看
+
         cmm = CMMotionManager()
         CPhoto=cameraPhoto()
 //        filterButtonContainer.hidden = true
 //        cameraProgressView.progress = 0.5(横向进度条暂停使用）
         cameraProgressView.transform = CGAffineTransformRotate(cameraProgressView.transform, CGFloat(-M_PI_2))
         cameraProgressView.transform = CGAffineTransformScale(cameraProgressView.transform, CGFloat(1),CGFloat(2))
+        if WCSession.isSupported(){
+            let session = WCSession.defaultSession()
+            session.delegate = self
+            session.activateSession()
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -115,9 +123,6 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     @IBAction func applyFilter(sender: UIButton) {//使用滤镜
         var filterName = filterNames[sender.tag]
         filter = CIFilter(name: filterName)
-    }
-    func updateCounter(){//更新计时器
-        counter += 1
     }
     func setupCaptureSession(){ //初始化相机
         cameraCaptureSession = AVCaptureSession()
@@ -236,13 +241,22 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         sender.enabled = true
         self.cameraCaptureSession.startRunning()
     }
+    func takePicture(){
+        self.cameraCaptureSession.stopRunning()
+        sleep(1)
+        CPhoto.saveImage(self.cameraUIView.image!)
+        self.cameraCaptureSession.startRunning()
+    }
     
-    
-    func  captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {//视频流监测
+    func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {//视频流监测
+        self.countframe = self.countframe + 1
+        if self.countframe > 30000 {self.countframe = 1}
+        
         let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
         let formatDescription = CMSampleBufferGetFormatDescription(sampleBuffer)!
         let rnd=arc4random()%10;
         
+        var tmp_score = 0.0,tmp_score2 = 0.0
         var outputImage = CIImage(CVPixelBuffer: imageBuffer)
         let orientation = UIDevice.currentDevice().orientation
         var t:CGAffineTransform!
@@ -263,45 +277,71 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         }
         
         let cgImage = self.cameraCIContext.createCGImage(outputImage, fromRect: outputImage.extent)
-        var uiimage = UIImage(CGImage: cgImage)
+        uiimage2 = UIImage(CGImage: cgImage)
+        var uiimage:UIImage!
         
         self.cameraCIImage = outputImage
-        dispatch_sync(dispatch_get_main_queue(), {//并行线程的回收
-            Score = self.cv.get_score_after_track(uiimage);
-            uiimage = self.cv.track_object(uiimage)
-            
-            if Score >= 10.0 {
-                Score = 40*(Score-20)+Double(rnd);
-                self.cameraScoreLabel.text="mid Score: \(Score)"
-            }
-            else{
-                Score *= 30
-                Score += Double(rnd);
-                //Score += arc4random()%10;
-                self.cameraScoreLabel.text="third Score: \(Score)"
+        uiimage = uiimage2
+        uiimage2 = self.cv.track_object(uiimage)
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0),{
+            dispatch_async(dispatch_get_main_queue(),{
+                self.cameraUIView.image = uiimage2
                 
+            })
+            if self.countframe % 15 == 0{
+                Score = self.cv.get_score_after_track(uiimage);
             }
-            if Score >= 99 {
-                if arc4random()%20 == 10 {
-                    self.CPhoto.saveImage(self.cameraUIView.image!)
-                    uiimage = self.cv.full_white(uiimage);
+            dispatch_async(dispatch_get_main_queue(), {//并行线程的回收
+               
+                if Score >= 20.0 {
+                    tmp_score = 100*log10(10*(Score-20)+1);
+                    tmp_score = floor(tmp_score)
+                    tmp_score2 = floor(tmp_score/5)*5
+                    try! WCSession.defaultSession().updateApplicationContext(["Score":tmp_score2]);
+                    self.cameraScoreLabel.text="mid Score: \(tmp_score2)"
                 }
-            }
-            self.cameraUIView.image = uiimage
-            
-            /******横向进度条（暂时不用）******/
-            self.cameraProgressView.setProgress(Float(Score/100), animated: true)
-            if Score >= 50{
-                //print(CGFloat(5 * ( 100-Score )))
-                self.cameraProgressView.progressTintColor = UIColor(red: CGFloat(((232-23)/50*(100-Score)+23)/255), green: CGFloat(((184-161)/50*(100-Score)+161)/255), blue: CGFloat(((99-154)/50*(100-Score)+154)/255), alpha: 1)
-            }
-            else{
-                self.cameraProgressView.progressTintColor = UIColor(red: CGFloat(((224-232)/50*(50-Score)+232)/255), green: CGFloat(((90-184)/50*(50-Score)+184)/255), blue: CGFloat(((109-99)/50*(50-Score)+99)/255), alpha: 1)
-            }
+                else{
+                    tmp_score = 100*(Score/3);
+                    tmp_score = floor(tmp_score)
+                    tmp_score2 = floor(tmp_score/5)*5
+                    try! WCSession.defaultSession().updateApplicationContext(["Score":tmp_score2]);
+                    self.cameraScoreLabel.text="third Score: \(tmp_score2)"
+                    
+                }
+                
+                if tmp_score == 99  {
+                    if arc4random()%20 == 10 {
+                        self.CPhoto.saveImage(self.cameraUIView.image!)
+                        uiimage = self.cv.full_white(uiimage);
+                    }
+                }
+                
+                /******横向进度条变竖******/
+                self.cameraProgressView.setProgress(Float(tmp_score/100), animated: true)
+                if tmp_score >= 50{
+                    //print(CGFloat(5 * ( 100-Score )))
+                    self.cameraProgressView.progressTintColor = UIColor(red: CGFloat(((232-23)/50*(100-tmp_score)+23)/255), green: CGFloat(((184-161)/50*(100-tmp_score)+161)/255), blue: CGFloat(((99-154)/50*(100-tmp_score)+154)/255), alpha: 1)
+                }
+                else{
+                    self.cameraProgressView.progressTintColor = UIColor(red: CGFloat(((224-232)/50*(50-tmp_score)+232)/255), green: CGFloat(((90-184)/50*(50-tmp_score)+184)/255), blue: CGFloat(((109-99)/50*(50-tmp_score)+99)/255), alpha: 1)
+                }
+                
+            })
         })
-    }
-    func changeScrollBar(score:Double){
         
     }
     
+}
+extension cameraPeople{
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+        cameraScoreLabel.text = "success"
+        var takePhoto = applicationContext["a"] as! Bool
+        if takePhoto {
+            takePicture()
+        }
+    }
+//    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+//        cameraScoreLabel.text = "success"
+//    }
 }
