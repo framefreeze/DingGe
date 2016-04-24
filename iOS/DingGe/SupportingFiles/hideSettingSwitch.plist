@@ -5,11 +5,11 @@
 	<key>New item</key>
 	<array>
 		<false/>
-		<false/>
+		<true/>
 	</array>
 	<key>New item - 2</key>
 	<array>
-		<false/>
+		<true/>
 		<true/>
 	</array>
 </dict>
