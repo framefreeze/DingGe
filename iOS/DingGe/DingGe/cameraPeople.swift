@@ -22,6 +22,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     @IBOutlet var cameraBackButton: UIButton!//返回按钮
     @IBOutlet var cameraRecordsButton: UIButton!//拍照按钮
     @IBOutlet var cameraProgressView: UIProgressView!//打分进度条(暂时不用）
+    @IBOutlet var autoTakePhotoButton: UIButton!
 //    @IBOutlet var ScoreBarView: UIProgressView!
     @IBOutlet var cameraFilterButton: UIButton!//滤镜按钮
     var cameraCaptureDevice:AVCaptureDevice!
@@ -49,7 +50,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     var accelerationX:CGFloat!
     var accelerationY:CGFloat!
     var accelerationZ:CGFloat!
-    
+    var session:WCSession!
     //图片存储单例类
     var CPhoto:cameraPhoto!
     override func viewDidLoad() {//界面加载完成时调用
@@ -65,11 +66,19 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //        filterButtonContainer.hidden = true
 //        cameraProgressView.progress = 0.5(横向进度条暂停使用）
         cameraProgressView.transform = CGAffineTransformRotate(cameraProgressView.transform, CGFloat(-M_PI_2))
-        cameraProgressView.transform = CGAffineTransformScale(cameraProgressView.transform, CGFloat(1),CGFloat(2))
+//        cameraProgressView.transform = CGAffineTransformScale(cameraProgressView.transform, CGFloat(1),CGFloat(2))
         if WCSession.isSupported(){
-            let session = WCSession.defaultSession()
-            session.delegate = self
-            session.activateSession()
+            session = WCSession.defaultSession()
+            if  session.watchAppInstalled == true{
+                session.delegate = self
+                session.activateSession()
+            }
+        }
+        if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == false){
+            autoTakePhotoButton.setTitle("手动", forState: UIControlState.Normal)
+        }
+        else{
+            autoTakePhotoButton.setTitle("自动", forState: UIControlState.Normal)
         }
     }
     
@@ -248,6 +257,17 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         self.cameraCaptureSession.startRunning()
     }
     
+    @IBAction func switchAutoTakePicture(sender: AnyObject) {
+        print(sender.currentTitle as String?!)
+        if sender.currentTitle as String?! == "自动"{
+            sender.setTitle("手动", forState: UIControlState.Normal)
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "AutoTakePicture")
+        }
+        else{
+            sender.setTitle("自动", forState: UIControlState.Normal)
+            NSUserDefaults.standardUserDefaults().setBool(true,forKey: "AutoTakePicture")
+        }
+    }
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {//视频流监测
         self.countframe = self.countframe + 1
         if self.countframe > 30000 {self.countframe = 1}
@@ -298,14 +318,18 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     tmp_score = 100*log10(10*(Score-20)+1);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
-                    try! WCSession.defaultSession().updateApplicationContext(["Score":tmp_score2]);
+                    if self.session.watchAppInstalled == true{
+                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
+                    }
                     self.cameraScoreLabel.text="mid Score: \(tmp_score2)"
                 }
                 else{
                     tmp_score = 100*(Score/3);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
-                    try! WCSession.defaultSession().updateApplicationContext(["Score":tmp_score2]);
+                    if self.session.watchAppInstalled == true{
+                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
+                    }
                     self.cameraScoreLabel.text="third Score: \(tmp_score2)"
                     
                 }

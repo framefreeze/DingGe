@@ -100,11 +100,14 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hAK-YJ-9QJ" id="A3H-mx-y9Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zsM-2x-pBc">
                                                     <rect key="frame" x="276" y="4" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="settingSwitchValueChange:" destination="6ge-Pq-WD1" eventType="valueChanged" id="F5P-Rc-E0J"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYP-mz-9yK">
                                                     <rect key="frame" x="8" y="11" width="186" height="21"/>
@@ -170,6 +173,13 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBw-cg-79O">
+                                                <rect key="frame" x="170" y="1" width="30" height="30"/>
+                                                <state key="normal" title="自动"/>
+                                                <connections>
+                                                    <action selector="switchAutoTakePicture:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="Xr1-cX-YEv"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.75686274509999996" green="0.80392156859999997" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -241,6 +251,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="autoTakePhotoButton" destination="uBw-cg-79O" id="ar9-RZ-QHR"/>
                         <outlet property="cameraBackButton" destination="cgn-0Z-Q0p" id="c23-fq-qdx"/>
                         <outlet property="cameraFilterButton" destination="Z14-wu-55c" id="1ud-1l-iVf"/>
                         <outlet property="cameraProgressView" destination="9ND-Fl-6sq" id="ddr-Df-YNe"/>
@@ -251,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJd-A4-eiN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="-109"/>
+            <point key="canvasLocation" x="1147" y="-107"/>
         </scene>
     </scenes>
     <resources>

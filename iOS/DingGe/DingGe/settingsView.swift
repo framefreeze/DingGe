@@ -21,6 +21,7 @@ class settingsView: UIViewController,UITableViewDataSource,UITableViewDelegate {
         // Do any additional setup after loading the view.
         settingDataDictionary = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("SupportingFiles/settingData", withExtension: "plist")!)
         hideSettingSwitch = NSDictionary(contentsOfURL: NSBundle.mainBundle().URLForResource("SupportingFiles/hideSettingSwitch", withExtension: "plist")!)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +43,12 @@ class settingsView: UIViewController,UITableViewDataSource,UITableViewDelegate {
         settingLabel.text = (settingDataDictionary?.allValues[indexPath.section] as! NSArray).objectAtIndex(indexPath.row) as! String
         let settingSwitch = settingTableCell.viewWithTag(2) as! UISwitch
         settingSwitch.hidden = (hideSettingSwitch.allValues[indexPath.section] as! NSArray).objectAtIndex(indexPath.row) as! Bool
+        if(NSUserDefaults.standardUserDefaults().boolForKey("AutoHidden")as Bool! == false){
+            settingSwitch.on = false
+        }
+        else{
+            settingSwitch.on = true
+        }
 //        settingSwitch.hidden =
         //        settingSwitch
 //        print("1\(settingLabel.text)")
@@ -57,7 +64,7 @@ class settingsView: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBAction func settingSwitchValueChange(sender: AnyObject) {
 //        print(sender.indexPath.row)
-        if(NSUserDefaults.standardUserDefaults().boolForKey("AutoHidden")as Bool! == false){
+        if(sender.on == false){
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "AutoHidden")
         }
         else{
