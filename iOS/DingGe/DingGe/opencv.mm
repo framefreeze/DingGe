@@ -133,7 +133,7 @@ double distance(cv::Point vec1,cv::Point vec2){
 -(void)load_file{
     NSString* cascadePath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/haarcascade_frontalface_alt2" ofType:@"xml"];
     faceDetector.load([cascadePath UTF8String]);
-    NSString* knnPath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/third_KNN_2" ofType:@"xml"];
+    NSString* knnPath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/third_KNN_New" ofType:@"xml"];
     knn_third = cv::Algorithm::load<cv::ml::KNearest>([knnPath UTF8String]);
     NSString* knn_midPath = [[NSBundle mainBundle]pathForResource:@"SupportingFiles/mid_KNN_AKAZE" ofType:@"xml"];
     knn_mid = cv::Algorithm::load<cv::ml::KNearest>([knn_midPath UTF8String]);
@@ -297,7 +297,7 @@ double distance(cv::Point vec1,cv::Point vec2){
     
     score = knn_third->predict(getRespon);
     printf("third score: %lf\n",score);
-    if ((score/10) > score1)
+    if ((score) > score1)
         return score;
     else
         return 20.0+score1;
