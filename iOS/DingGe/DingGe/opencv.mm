@@ -47,12 +47,18 @@ double distance(cv::Point vec1,cv::Point vec2){
     }
     return self;
 }
+-(bool) If_track{
+    if(if_track == 0)
+        return false;
+    else
+        return true;
+}
 -(void) change_selection:(CGPoint)point{
-    if(point.y-31 < 0 ) return;
+    if(point.y-51 < 0 ) return;
     
     float x,y;
     x = 2.88*point.x;
-    y = 2.88*(point.y-31);
+    y = 2.88*(point.y-51);
     
     if( if_track == 0 ){
         self->selection = cv::Rect(x-10,y-10,20,20);
@@ -76,12 +82,13 @@ double distance(cv::Point vec1,cv::Point vec2){
     const float* phranges = hranges;
     
     cv::Mat hsv, hue, mask, backproj;
-    image = image(cv::Rect(0,0,1080,1318));
-    
+    image = image(cv::Rect(0,0,1080,1508));
+//    circle(image, cv::Point(self->selection.x+10, self->selection.y+10),10,Scalar(0,0,255), 5, LINE_AA);
     cvtColor(image, hsv, COLOR_BGR2HSV);
     if ( if_track != 0 ){
+//    if ( if_track == 10 ){//测试
         int _vmin = vmin, _vmax = vmax;
-        
+
         inRange(hsv, Scalar(0, smin, MIN(_vmin,_vmax)),
                 Scalar(180, 256, MAX(_vmin, _vmax)), mask);//去除较弱光线的影响
         
@@ -110,8 +117,8 @@ double distance(cv::Point vec1,cv::Point vec2){
                                    trackWindow.x + r, trackWindow.y + r) & cv::Rect(0, 0, cols, rows);
         }
         
-        ellipse( image, trackBox, Scalar(0,0,255), 5, LINE_AA );
-        rectangle( image, trackWindow, Scalar(0,0,255), 3);
+        //ellipse( image, trackBox, Scalar(0,0,255), 5, LINE_AA );
+        rectangle( image, trackWindow, Scalar(0,255,0), 2, LINE_AA);
         //return MatToUIImage(backproj);
     }
     
@@ -240,13 +247,14 @@ double distance(cv::Point vec1,cv::Point vec2){
 
 //追踪后三分线打分
 -(double)get_score_after_track:(UIImage *)image{
-    double score;
+    double score,score1;
     Mat test_data,gray;
     UIImageToMat(image, test_data);
     cvtColor(test_data,gray,CV_BGR2GRAY);
-    if(trackWindow.area() < 4){
-        return 20.01 + [self get_score_mid:image];
-    }
+    //if(trackWindow.area() < 4){
+//        return 20.01 + [self get_score_mid:image];
+    //}
+    score1 = [self get_score_mid:image];
     
     
     cv::Mat getRespon(1,4,CV_32FC1);
@@ -289,7 +297,10 @@ double distance(cv::Point vec1,cv::Point vec2){
     
     score = knn_third->predict(getRespon);
     printf("third score: %lf\n",score);
-    return score;
+    if ((score/10) > score1)
+        return score;
+    else
+        return 20.0+score1;
 }
 
 //人脸追踪

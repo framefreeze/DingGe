@@ -24,4 +24,5 @@
 -(double)get_score_mid:(UIImage*)image;//对称打分
 -(double)get_score_after_track:(UIImage*)image;
 -(void)loadfacedetc;//加载人脸检测（以停用
+-(bool)If_track;
 @end

@@ -40,6 +40,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     lazy var filterNames: [String] = {
         return ["CIColorInvert","CIPhotoEffectMono","CIPhotoEffectInstant","CIPhotoEffectTransfer"]
     }()//滤镜库
+    
     var cameraCIImage:CIImage!//拍照用的
     var counter = 0;
     var timer:NSTimer!
@@ -119,6 +120,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
             self.cv.change_selection(point!)
         }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -133,6 +135,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         var filterName = filterNames[sender.tag]
         filter = CIFilter(name: filterName)
     }
+
     func setupCaptureSession(){ //初始化相机
         cameraCaptureSession = AVCaptureSession()
         cameraCaptureSession.beginConfiguration()
@@ -257,6 +260,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         self.cameraCaptureSession.startRunning()
     }
     
+<<<<<<< HEAD
     @IBAction func switchAutoTakePicture(sender: AnyObject) {
         print(sender.currentTitle as String?!)
         if sender.currentTitle as String?! == "自动"{
@@ -268,6 +272,9 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
             NSUserDefaults.standardUserDefaults().setBool(true,forKey: "AutoTakePicture")
         }
     }
+=======
+
+>>>>>>> Dev
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {//视频流监测
         self.countframe = self.countframe + 1
         if self.countframe > 30000 {self.countframe = 1}
@@ -303,38 +310,50 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         self.cameraCIImage = outputImage
         uiimage = uiimage2
         uiimage2 = self.cv.track_object(uiimage)
-        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0),{
             dispatch_async(dispatch_get_main_queue(),{
                 self.cameraUIView.image = uiimage2
                 
             })
-            if self.countframe % 15 == 0{
-                Score = self.cv.get_score_after_track(uiimage);
+            if self.cv.If_track() && (self.countframe % 20 == 0){
+                Score = self.cv.get_score_after_track(uiimage2);
+                //self.cameraUIView.image = uiimage
+                
             }
             dispatch_async(dispatch_get_main_queue(), {//并行线程的回收
-               
                 if Score >= 20.0 {
                     tmp_score = 100*log10(10*(Score-20)+1);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
+<<<<<<< HEAD
                     if self.session.watchAppInstalled == true{
                         try! self.session.updateApplicationContext(["Score":tmp_score2]);
                     }
+=======
+>>>>>>> Dev
                     self.cameraScoreLabel.text="mid Score: \(tmp_score2)"
+                }
+                else if Score == 0.0{
+                    self.cameraScoreLabel.text="Score:"
                 }
                 else{
                     tmp_score = 100*(Score/3);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
+<<<<<<< HEAD
                     if self.session.watchAppInstalled == true{
                         try! self.session.updateApplicationContext(["Score":tmp_score2]);
                     }
+=======
+                    //                        tmp_score = Score*30
+                    //                        tmp_score += Double(rnd)
+                    //                        tmp_score = floor(tmp_score)
+                    //                        tmp_score2 = floor(tmp_score/5)*5
+>>>>>>> Dev
                     self.cameraScoreLabel.text="third Score: \(tmp_score2)"
                     
                 }
-                
-                if tmp_score == 99  {
+                if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == false) && tmp_score >= 99{
                     if arc4random()%20 == 10 {
                         self.CPhoto.saveImage(self.cameraUIView.image!)
                         uiimage = self.cv.full_white(uiimage);
