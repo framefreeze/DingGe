@@ -308,7 +308,8 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     self.cameraScoreLabel.text="Score:"
                 }
                 else{
-                    tmp_score = 100*(Score/3);
+                    tmp_score = 100*log10(10*Score+1);
+                    //tmp_score = 100*(Score);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
                     //                        tmp_score = Score*30
