@@ -341,10 +341,10 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     self.cameraScoreLabel.text="三分线: \(tmp_score2)"
                     
                 }
-                if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == false) && tmp_score >= 99{
-                    if arc4random()%20 == 10 {
+                if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == true) && tmp_score >= 90{
+                   if arc4random()%20 == 10 {
                         self.CPhoto.saveImage(self.cameraUIView.image!)
-                        uiimage = self.cv.full_white(uiimage);
+                        uiimage2 = self.cv.full_white(uiimage);
                     }
                 }
                 
