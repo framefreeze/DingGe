@@ -292,8 +292,8 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                 self.cameraUIView.image = uiimage2
                 
             })
-            if self.cv.If_track() && (self.countframe % 15 == 0){
-                Score = self.cv.get_score_after_track(uiimage);
+            if self.cv.If_track() && (self.countframe % 20 == 0){
+                Score = self.cv.get_score_after_track(uiimage2);
                 //self.cameraUIView.image = uiimage
                 
             }
@@ -318,8 +318,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     self.cameraScoreLabel.text="third Score: \(tmp_score2)"
                     
                 }
-                
-                if tmp_score == 99  {
+                if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == false) && tmp_score >= 99{
                     if arc4random()%20 == 10 {
                         self.CPhoto.saveImage(self.cameraUIView.image!)
                         uiimage = self.cv.full_white(uiimage);
