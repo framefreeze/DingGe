@@ -124,6 +124,8 @@
 		0AF6186D1CC3DCD400977F4F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		0AF6186F1CC3DEB200977F4F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AF618731CC3DEEA00977F4F /* DingGe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DingGe.entitlements; sourceTree = "<group>"; };
+		21C17BE81CCB65BD00ED953C /* stats.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stats.hpp; sourceTree = "<group>"; };
+		21C17BE91CCB67A300ED953C /* AKAZE_tracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKAZE_tracker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 		0AF618291CC3D8AA00977F4F /* DingGe */ = {
 			isa = PBXGroup;
 			children = (
+				21C17BE81CCB65BD00ED953C /* stats.hpp */,
 				0AF618731CC3DEEA00977F4F /* DingGe.entitlements */,
 				0AF618641CC3DC6900977F4F /* cameraPeople.swift */,
 				0AF618651CC3DC6900977F4F /* cameraPhoto.swift */,
@@ -235,6 +238,7 @@
 				0AF618331CC3D8AA00977F4F /* LaunchScreen.storyboard */,
 				0AF618361CC3D8AA00977F4F /* Info.plist */,
 				0AF618631CC3DC6900977F4F /* DingGe-Bridging-Header.h */,
+				21C17BE91CCB67A300ED953C /* AKAZE_tracker.h */,
 			);
 			path = DingGe;
 			sourceTree = "<group>";
@@ -361,15 +365,15 @@
 				TargetAttributes = {
 					0A21A4261CCBBD8600B3139B = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 7AVDNX29VL;
+						DevelopmentTeam = D5HF3C53NT;
 					};
 					0A21A4321CCBBD8600B3139B = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 7AVDNX29VL;
+						DevelopmentTeam = D5HF3C53NT;
 					};
 					0AF618261CC3D8AA00977F4F = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 7AVDNX29VL;
+						DevelopmentTeam = D5HF3C53NT;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 0;
@@ -557,7 +561,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = DingGeforWahch_Extension;
 				INFOPLIST_FILE = DingGeforWahch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -574,7 +578,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = DingGeforWahch_Extension;
 				INFOPLIST_FILE = DingGeforWahch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -586,10 +590,13 @@
 		0A21A44A1CCBBD8600B3139B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DingGeforWahch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -600,10 +607,13 @@
 		0A21A44B1CCBBD8600B3139B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DingGeforWahch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -708,7 +718,7 @@
 				INFOPLIST_FILE = DingGe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DingGe/DingGe-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -729,7 +739,7 @@
 				INFOPLIST_FILE = DingGe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DingGe/DingGe-Bridging-Header.h";
 			};
