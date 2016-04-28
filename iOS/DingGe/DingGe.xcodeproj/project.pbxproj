@@ -1,0 +1,854 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A21A42B1CCBBD8600B3139B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A21A4291CCBBD8600B3139B /* Interface.storyboard */; };
+		0A21A42D1CCBBD8600B3139B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A21A42C1CCBBD8600B3139B /* Assets.xcassets */; };
+		0A21A4341CCBBD8600B3139B /* DingGeforWahch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0A21A4331CCBBD8600B3139B /* DingGeforWahch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0A21A43B1CCBBD8600B3139B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21A43A1CCBBD8600B3139B /* InterfaceController.swift */; };
+		0A21A43D1CCBBD8600B3139B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21A43C1CCBBD8600B3139B /* ExtensionDelegate.swift */; };
+		0A21A43F1CCBBD8600B3139B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21A43E1CCBBD8600B3139B /* NotificationController.swift */; };
+		0A21A4411CCBBD8600B3139B /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21A4401CCBBD8600B3139B /* GlanceController.swift */; };
+		0A21A4431CCBBD8600B3139B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A21A4421CCBBD8600B3139B /* Assets.xcassets */; };
+		0A21A4471CCBBD8600B3139B /* DingGeforWahch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0A21A4271CCBBD8600B3139B /* DingGeforWahch.app */; };
+		0A8116E71CC7D89400842EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8116E61CC7D89400842EF7 /* Assets.xcassets */; };
+		0AF6182B1CC3D8AA00977F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF6182A1CC3D8AA00977F4F /* AppDelegate.swift */; };
+		0AF6182D1CC3D8AA00977F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF6182C1CC3D8AA00977F4F /* ViewController.swift */; };
+		0AF618301CC3D8AA00977F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF6182E1CC3D8AA00977F4F /* Main.storyboard */; };
+		0AF618351CC3D8AA00977F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF618331CC3D8AA00977F4F /* LaunchScreen.storyboard */; };
+		0AF618401CC3D8AA00977F4F /* DingGeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF6183F1CC3D8AA00977F4F /* DingGeTests.swift */; };
+		0AF6184B1CC3D8AA00977F4F /* DingGeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF6184A1CC3D8AA00977F4F /* DingGeUITests.swift */; };
+		0AF618621CC3DB7600977F4F /* SupportingFiles in Resources */ = {isa = PBXBuildFile; fileRef = 0AF618611CC3DB7600977F4F /* SupportingFiles */; };
+		0AF618691CC3DC6900977F4F /* cameraPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF618641CC3DC6900977F4F /* cameraPeople.swift */; };
+		0AF6186A1CC3DC6900977F4F /* cameraPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF618651CC3DC6900977F4F /* cameraPhoto.swift */; };
+		0AF6186B1CC3DC6900977F4F /* opencv.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AF618671CC3DC6900977F4F /* opencv.mm */; };
+		0AF6186C1CC3DC6900977F4F /* settingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF618681CC3DC6900977F4F /* settingsView.swift */; };
+		0AF6186E1CC3DCD400977F4F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF6186D1CC3DCD400977F4F /* opencv2.framework */; };
+		0AF618701CC3DEB200977F4F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF6186F1CC3DEB200977F4F /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A21A4351CCBBD8600B3139B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AF6181F1CC3D8AA00977F4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A21A4321CCBBD8600B3139B;
+			remoteInfo = "DingGeforWahch Extension";
+		};
+		0A21A4451CCBBD8600B3139B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AF6181F1CC3D8AA00977F4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A21A4261CCBBD8600B3139B;
+			remoteInfo = DingGeforWahch;
+		};
+		0AF6183C1CC3D8AA00977F4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AF6181F1CC3D8AA00977F4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AF618261CC3D8AA00977F4F;
+			remoteInfo = DingGe;
+		};
+		0AF618471CC3D8AA00977F4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AF6181F1CC3D8AA00977F4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AF618261CC3D8AA00977F4F;
+			remoteInfo = DingGe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0A21A44D1CCBBD8600B3139B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0A21A4341CCBBD8600B3139B /* DingGeforWahch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A21A44F1CCBBD8600B3139B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0A21A4471CCBBD8600B3139B /* DingGeforWahch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0A21A4271CCBBD8600B3139B /* DingGeforWahch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingGeforWahch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A21A42A1CCBBD8600B3139B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0A21A42C1CCBBD8600B3139B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A21A42E1CCBBD8600B3139B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A21A4331CCBBD8600B3139B /* DingGeforWahch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DingGeforWahch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A21A4391CCBBD8600B3139B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		0A21A43A1CCBBD8600B3139B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		0A21A43C1CCBBD8600B3139B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		0A21A43E1CCBBD8600B3139B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		0A21A4401CCBBD8600B3139B /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		0A21A4421CCBBD8600B3139B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A21A4441CCBBD8600B3139B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A8116E61CC7D89400842EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AF618271CC3D8AA00977F4F /* DingGe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingGe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF6182A1CC3D8AA00977F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0AF6182C1CC3D8AA00977F4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0AF6182F1CC3D8AA00977F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0AF618341CC3D8AA00977F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0AF618361CC3D8AA00977F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AF6183B1CC3D8AA00977F4F /* DingGeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DingGeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF6183F1CC3D8AA00977F4F /* DingGeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DingGeTests.swift; sourceTree = "<group>"; };
+		0AF618411CC3D8AA00977F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AF618461CC3D8AA00977F4F /* DingGeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DingGeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF6184A1CC3D8AA00977F4F /* DingGeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DingGeUITests.swift; sourceTree = "<group>"; };
+		0AF6184C1CC3D8AA00977F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AF618611CC3DB7600977F4F /* SupportingFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SupportingFiles; sourceTree = "<group>"; };
+		0AF618631CC3DC6900977F4F /* DingGe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DingGe-Bridging-Header.h"; sourceTree = "<group>"; };
+		0AF618641CC3DC6900977F4F /* cameraPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraPeople.swift; sourceTree = "<group>"; };
+		0AF618651CC3DC6900977F4F /* cameraPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraPhoto.swift; sourceTree = "<group>"; };
+		0AF618661CC3DC6900977F4F /* opencv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opencv.h; sourceTree = "<group>"; };
+		0AF618671CC3DC6900977F4F /* opencv.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = opencv.mm; sourceTree = "<group>"; };
+		0AF618681CC3DC6900977F4F /* settingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsView.swift; sourceTree = "<group>"; };
+		0AF6186D1CC3DCD400977F4F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		0AF6186F1CC3DEB200977F4F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0AF618731CC3DEEA00977F4F /* DingGe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DingGe.entitlements; sourceTree = "<group>"; };
+		21C17BE81CCB65BD00ED953C /* stats.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stats.hpp; sourceTree = "<group>"; };
+		21C17BE91CCB67A300ED953C /* AKAZE_tracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKAZE_tracker.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A21A4301CCBBD8600B3139B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF618241CC3D8AA00977F4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF618701CC3DEB200977F4F /* AVFoundation.framework in Frameworks */,
+				0AF6186E1CC3DCD400977F4F /* opencv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF618381CC3D8AA00977F4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF618431CC3D8AA00977F4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A21A4281CCBBD8600B3139B /* DingGeforWahch */ = {
+			isa = PBXGroup;
+			children = (
+				0A21A4291CCBBD8600B3139B /* Interface.storyboard */,
+				0A21A42C1CCBBD8600B3139B /* Assets.xcassets */,
+				0A21A42E1CCBBD8600B3139B /* Info.plist */,
+			);
+			path = DingGeforWahch;
+			sourceTree = "<group>";
+		};
+		0A21A4371CCBBD8600B3139B /* DingGeforWahch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0A21A43A1CCBBD8600B3139B /* InterfaceController.swift */,
+				0A21A43C1CCBBD8600B3139B /* ExtensionDelegate.swift */,
+				0A21A43E1CCBBD8600B3139B /* NotificationController.swift */,
+				0A21A4401CCBBD8600B3139B /* GlanceController.swift */,
+				0A21A4421CCBBD8600B3139B /* Assets.xcassets */,
+				0A21A4441CCBBD8600B3139B /* Info.plist */,
+				0A21A4381CCBBD8600B3139B /* Supporting Files */,
+			);
+			path = "DingGeforWahch Extension";
+			sourceTree = "<group>";
+		};
+		0A21A4381CCBBD8600B3139B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A21A4391CCBBD8600B3139B /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AF6181E1CC3D8AA00977F4F = {
+			isa = PBXGroup;
+			children = (
+				0AF6186F1CC3DEB200977F4F /* AVFoundation.framework */,
+				0AF6186D1CC3DCD400977F4F /* opencv2.framework */,
+				0AF618611CC3DB7600977F4F /* SupportingFiles */,
+				0AF618291CC3D8AA00977F4F /* DingGe */,
+				0AF6183E1CC3D8AA00977F4F /* DingGeTests */,
+				0AF618491CC3D8AA00977F4F /* DingGeUITests */,
+				0A21A4281CCBBD8600B3139B /* DingGeforWahch */,
+				0A21A4371CCBBD8600B3139B /* DingGeforWahch Extension */,
+				0AF618281CC3D8AA00977F4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AF618281CC3D8AA00977F4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AF618271CC3D8AA00977F4F /* DingGe.app */,
+				0AF6183B1CC3D8AA00977F4F /* DingGeTests.xctest */,
+				0AF618461CC3D8AA00977F4F /* DingGeUITests.xctest */,
+				0A21A4271CCBBD8600B3139B /* DingGeforWahch.app */,
+				0A21A4331CCBBD8600B3139B /* DingGeforWahch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AF618291CC3D8AA00977F4F /* DingGe */ = {
+			isa = PBXGroup;
+			children = (
+				21C17BE81CCB65BD00ED953C /* stats.hpp */,
+				0AF618731CC3DEEA00977F4F /* DingGe.entitlements */,
+				0AF618641CC3DC6900977F4F /* cameraPeople.swift */,
+				0AF618651CC3DC6900977F4F /* cameraPhoto.swift */,
+				0AF618661CC3DC6900977F4F /* opencv.h */,
+				0AF618671CC3DC6900977F4F /* opencv.mm */,
+				0AF618681CC3DC6900977F4F /* settingsView.swift */,
+				0AF6182A1CC3D8AA00977F4F /* AppDelegate.swift */,
+				0AF6182C1CC3D8AA00977F4F /* ViewController.swift */,
+				0A8116E61CC7D89400842EF7 /* Assets.xcassets */,
+				0AF6182E1CC3D8AA00977F4F /* Main.storyboard */,
+				0AF618331CC3D8AA00977F4F /* LaunchScreen.storyboard */,
+				0AF618361CC3D8AA00977F4F /* Info.plist */,
+				0AF618631CC3DC6900977F4F /* DingGe-Bridging-Header.h */,
+				21C17BE91CCB67A300ED953C /* AKAZE_tracker.h */,
+			);
+			path = DingGe;
+			sourceTree = "<group>";
+		};
+		0AF6183E1CC3D8AA00977F4F /* DingGeTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AF6183F1CC3D8AA00977F4F /* DingGeTests.swift */,
+				0AF618411CC3D8AA00977F4F /* Info.plist */,
+			);
+			path = DingGeTests;
+			sourceTree = "<group>";
+		};
+		0AF618491CC3D8AA00977F4F /* DingGeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0AF6184A1CC3D8AA00977F4F /* DingGeUITests.swift */,
+				0AF6184C1CC3D8AA00977F4F /* Info.plist */,
+			);
+			path = DingGeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A21A4261CCBBD8600B3139B /* DingGeforWahch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A21A44E1CCBBD8600B3139B /* Build configuration list for PBXNativeTarget "DingGeforWahch" */;
+			buildPhases = (
+				0A21A4251CCBBD8600B3139B /* Resources */,
+				0A21A44D1CCBBD8600B3139B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A21A4361CCBBD8600B3139B /* PBXTargetDependency */,
+			);
+			name = DingGeforWahch;
+			productName = DingGeforWahch;
+			productReference = 0A21A4271CCBBD8600B3139B /* DingGeforWahch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		0A21A4321CCBBD8600B3139B /* DingGeforWahch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A21A44C1CCBBD8600B3139B /* Build configuration list for PBXNativeTarget "DingGeforWahch Extension" */;
+			buildPhases = (
+				0A21A42F1CCBBD8600B3139B /* Sources */,
+				0A21A4301CCBBD8600B3139B /* Frameworks */,
+				0A21A4311CCBBD8600B3139B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DingGeforWahch Extension";
+			productName = "DingGeforWahch Extension";
+			productReference = 0A21A4331CCBBD8600B3139B /* DingGeforWahch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		0AF618261CC3D8AA00977F4F /* DingGe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AF6184F1CC3D8AA00977F4F /* Build configuration list for PBXNativeTarget "DingGe" */;
+			buildPhases = (
+				0AF618231CC3D8AA00977F4F /* Sources */,
+				0AF618241CC3D8AA00977F4F /* Frameworks */,
+				0AF618251CC3D8AA00977F4F /* Resources */,
+				0A21A44F1CCBBD8600B3139B /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A21A4461CCBBD8600B3139B /* PBXTargetDependency */,
+			);
+			name = DingGe;
+			productName = DingGe;
+			productReference = 0AF618271CC3D8AA00977F4F /* DingGe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0AF6183A1CC3D8AA00977F4F /* DingGeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AF618521CC3D8AA00977F4F /* Build configuration list for PBXNativeTarget "DingGeTests" */;
+			buildPhases = (
+				0AF618371CC3D8AA00977F4F /* Sources */,
+				0AF618381CC3D8AA00977F4F /* Frameworks */,
+				0AF618391CC3D8AA00977F4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AF6183D1CC3D8AA00977F4F /* PBXTargetDependency */,
+			);
+			name = DingGeTests;
+			productName = DingGeTests;
+			productReference = 0AF6183B1CC3D8AA00977F4F /* DingGeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0AF618451CC3D8AA00977F4F /* DingGeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AF618551CC3D8AA00977F4F /* Build configuration list for PBXNativeTarget "DingGeUITests" */;
+			buildPhases = (
+				0AF618421CC3D8AA00977F4F /* Sources */,
+				0AF618431CC3D8AA00977F4F /* Frameworks */,
+				0AF618441CC3D8AA00977F4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AF618481CC3D8AA00977F4F /* PBXTargetDependency */,
+			);
+			name = DingGeUITests;
+			productName = DingGeUITests;
+			productReference = 0AF618461CC3D8AA00977F4F /* DingGeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AF6181F1CC3D8AA00977F4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = FrameFreeze;
+				TargetAttributes = {
+					0A21A4261CCBBD8600B3139B = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = D5HF3C53NT;
+					};
+					0A21A4321CCBBD8600B3139B = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = D5HF3C53NT;
+					};
+					0AF618261CC3D8AA00977F4F = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = D5HF3C53NT;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
+					};
+					0AF6183A1CC3D8AA00977F4F = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 7AVDNX29VL;
+						TestTargetID = 0AF618261CC3D8AA00977F4F;
+					};
+					0AF618451CC3D8AA00977F4F = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 7AVDNX29VL;
+						TestTargetID = 0AF618261CC3D8AA00977F4F;
+					};
+				};
+			};
+			buildConfigurationList = 0AF618221CC3D8AA00977F4F /* Build configuration list for PBXProject "DingGe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AF6181E1CC3D8AA00977F4F;
+			productRefGroup = 0AF618281CC3D8AA00977F4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AF618261CC3D8AA00977F4F /* DingGe */,
+				0AF6183A1CC3D8AA00977F4F /* DingGeTests */,
+				0AF618451CC3D8AA00977F4F /* DingGeUITests */,
+				0A21A4261CCBBD8600B3139B /* DingGeforWahch */,
+				0A21A4321CCBBD8600B3139B /* DingGeforWahch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A21A4251CCBBD8600B3139B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A21A42D1CCBBD8600B3139B /* Assets.xcassets in Resources */,
+				0A21A42B1CCBBD8600B3139B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A21A4311CCBBD8600B3139B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A21A4431CCBBD8600B3139B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF618251CC3D8AA00977F4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF618621CC3DB7600977F4F /* SupportingFiles in Resources */,
+				0AF618351CC3D8AA00977F4F /* LaunchScreen.storyboard in Resources */,
+				0A8116E71CC7D89400842EF7 /* Assets.xcassets in Resources */,
+				0AF618301CC3D8AA00977F4F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF618391CC3D8AA00977F4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF618441CC3D8AA00977F4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A21A42F1CCBBD8600B3139B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A21A43F1CCBBD8600B3139B /* NotificationController.swift in Sources */,
+				0A21A43D1CCBBD8600B3139B /* ExtensionDelegate.swift in Sources */,
+				0A21A43B1CCBBD8600B3139B /* InterfaceController.swift in Sources */,
+				0A21A4411CCBBD8600B3139B /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF618231CC3D8AA00977F4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF6182D1CC3D8AA00977F4F /* ViewController.swift in Sources */,
+				0AF6182B1CC3D8AA00977F4F /* AppDelegate.swift in Sources */,
+				0AF6186B1CC3DC6900977F4F /* opencv.mm in Sources */,
+				0AF6186C1CC3DC6900977F4F /* settingsView.swift in Sources */,
+				0AF618691CC3DC6900977F4F /* cameraPeople.swift in Sources */,
+				0AF6186A1CC3DC6900977F4F /* cameraPhoto.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF618371CC3D8AA00977F4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF618401CC3D8AA00977F4F /* DingGeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF618421CC3D8AA00977F4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF6184B1CC3D8AA00977F4F /* DingGeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A21A4361CCBBD8600B3139B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A21A4321CCBBD8600B3139B /* DingGeforWahch Extension */;
+			targetProxy = 0A21A4351CCBBD8600B3139B /* PBXContainerItemProxy */;
+		};
+		0A21A4461CCBBD8600B3139B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A21A4261CCBBD8600B3139B /* DingGeforWahch */;
+			targetProxy = 0A21A4451CCBBD8600B3139B /* PBXContainerItemProxy */;
+		};
+		0AF6183D1CC3D8AA00977F4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AF618261CC3D8AA00977F4F /* DingGe */;
+			targetProxy = 0AF6183C1CC3D8AA00977F4F /* PBXContainerItemProxy */;
+		};
+		0AF618481CC3D8AA00977F4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AF618261CC3D8AA00977F4F /* DingGe */;
+			targetProxy = 0AF618471CC3D8AA00977F4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A21A4291CCBBD8600B3139B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A21A42A1CCBBD8600B3139B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		0AF6182E1CC3D8AA00977F4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AF6182F1CC3D8AA00977F4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0AF618331CC3D8AA00977F4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AF618341CC3D8AA00977F4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A21A4481CCBBD8600B3139B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DingGeforWahch_Extension;
+				INFOPLIST_FILE = DingGeforWahch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		0A21A4491CCBBD8600B3139B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DingGeforWahch_Extension;
+				INFOPLIST_FILE = DingGeforWahch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		0A21A44A1CCBBD8600B3139B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "DingGeforWahch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		0A21A44B1CCBBD8600B3139B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "DingGeforWahch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		0AF6184D1CC3D8AA00977F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0AF6184E1CC3D8AA00977F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0AF618501CC3D8AA00977F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = DingGe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DingGe/DingGe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0AF618511CC3D8AA00977F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = DingGe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DingGe/DingGe-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		0AF618531CC3D8AA00977F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DingGeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DingGe.app/DingGe";
+			};
+			name = Debug;
+		};
+		0AF618541CC3D8AA00977F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DingGeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DingGe.app/DingGe";
+			};
+			name = Release;
+		};
+		0AF618561CC3D8AA00977F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DingGeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DingGe;
+			};
+			name = Debug;
+		};
+		0AF618571CC3D8AA00977F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DingGeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DingGe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A21A44C1CCBBD8600B3139B /* Build configuration list for PBXNativeTarget "DingGeforWahch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A21A44A1CCBBD8600B3139B /* Debug */,
+				0A21A44B1CCBBD8600B3139B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A21A44E1CCBBD8600B3139B /* Build configuration list for PBXNativeTarget "DingGeforWahch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A21A4481CCBBD8600B3139B /* Debug */,
+				0A21A4491CCBBD8600B3139B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AF618221CC3D8AA00977F4F /* Build configuration list for PBXProject "DingGe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF6184D1CC3D8AA00977F4F /* Debug */,
+				0AF6184E1CC3D8AA00977F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AF6184F1CC3D8AA00977F4F /* Build configuration list for PBXNativeTarget "DingGe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF618501CC3D8AA00977F4F /* Debug */,
+				0AF618511CC3D8AA00977F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AF618521CC3D8AA00977F4F /* Build configuration list for PBXNativeTarget "DingGeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF618531CC3D8AA00977F4F /* Debug */,
+				0AF618541CC3D8AA00977F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AF618551CC3D8AA00977F4F /* Build configuration list for PBXNativeTarget "DingGeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF618561CC3D8AA00977F4F /* Debug */,
+				0AF618571CC3D8AA00977F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AF6181F1CC3D8AA00977F4F /* Project object */;
+}
