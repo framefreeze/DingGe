@@ -67,13 +67,13 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //        cameraProgressView.progress = 0.5(横向进度条暂停使用）
         cameraProgressView.transform = CGAffineTransformRotate(cameraProgressView.transform, CGFloat(-M_PI_2))
         cameraProgressView.transform = CGAffineTransformScale(cameraProgressView.transform, CGFloat(1),CGFloat(2))
-        if WCSession.isSupported(){
-            session = WCSession.defaultSession()
-            if  session.watchAppInstalled == true{
-                session.delegate = self
-                session.activateSession()
-            }
-        }
+//        if WCSession.isSupported(){
+//            session = WCSession.defaultSession()
+//            if  session.watchAppInstalled == true{
+//                session.delegate = self
+//                session.activateSession()
+//            }
+//        }
         if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == false){
             autoTakePhotoButton.setTitle("手动", forState: UIControlState.Normal)
         }
@@ -320,9 +320,9 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     tmp_score = 100*log10(10*(Score-20)+1);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
-                    if self.session.watchAppInstalled == true{
-                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
-                    }
+//                    if self.session.watchAppInstalled {
+//                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
+//                    }
 
                     self.cameraScoreLabel.text="对称: \(tmp_score2)"
                 }
@@ -334,9 +334,9 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     //tmp_score = 100*(Score);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
-                    if self.session.watchAppInstalled == true{
-                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
-                    }
+//                    if self.session.watchAppInstalled{
+//                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
+//                    }
 
                     self.cameraScoreLabel.text="三分线: \(tmp_score2)"
                     
