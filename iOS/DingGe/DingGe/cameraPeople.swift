@@ -68,12 +68,18 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         cameraProgressView.transform = CGAffineTransformRotate(cameraProgressView.transform, CGFloat(-M_PI_2))
         cameraProgressView.transform = CGAffineTransformScale(cameraProgressView.transform, CGFloat(1),CGFloat(2))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Dev
         if WCSession.isSupported(){
             let session = WCSession.defaultSession()
             session.delegate = self
             session.activateSession()
         }
+<<<<<<< HEAD
+>>>>>>> Dev
+=======
 >>>>>>> Dev
     }
     
@@ -308,6 +314,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     self.cameraScoreLabel.text="mid Score: \(tmp_score2)"
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
             }
             self.cameraUIView.image = uiimage
             
@@ -321,6 +328,8 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                 self.cameraProgressView.progressTintColor = UIColor(red: CGFloat(((224-232)/50*(50-Score)+232)/255), green: CGFloat(((90-184)/50*(50-Score)+184)/255), blue: CGFloat(((109-99)/50*(50-Score)+99)/255), alpha: 1)
             }
 =======
+=======
+>>>>>>> Dev
                 else if Score == 0.0{
                     self.cameraScoreLabel.text="Score:"
                 }
@@ -354,6 +363,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                 }
                 
             })
+<<<<<<< HEAD
 >>>>>>> Dev
         })
         
@@ -363,6 +373,11 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         
     }
 =======
+>>>>>>> Dev
+=======
+        })
+        
+    }
 >>>>>>> Dev
     
 }
