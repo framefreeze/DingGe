@@ -11,9 +11,9 @@
 手机摄影爱好者的选择，让我们共建一个优秀的摄影App
 
 ####示例:  
-<img src="https://github.com/framefreeze/DingGe/raw/Bob/Document/项目图片4.jpg" height=367px weight=205> 
-<img src="https://github.com/framefreeze/DingGe/raw/Bob/Document/项目图片5.jpg" height=367px weight=205>
-<img src="https://github.com/framefreeze/DingGe/raw/Bob/Document/项目图片6.jpg" height=367px weight=205>
+<img src="https://kevinfeng.name/pic/demo1.jpg" height=367px weight=205> 
+<img src="https://kevinfeng.name/pic/demoindex.png" height=367px weight=205>
+<img src="https://kevinfeng.name/pic/demowatch.jpg" height=367px weight=205>
 
 
 ###特性
