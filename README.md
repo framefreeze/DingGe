@@ -6,14 +6,14 @@
 -------------
 
 > 关于我们，欢迎关注  
-  http://kevinfeng.name/test/main.html 或者 dingge@ourmail.cn
+  http://www.framefreeze.cn 或者 dingge@ourmail.cn
 
 手机摄影爱好者的选择，让我们共建一个优秀的摄影App
 
 ####示例:  
-<img src="https://github.com/framefreeze/DingGe/raw/Dev/Document/项目图片1.jpg" height=403px weight=225> 
-<img src="https://github.com/framefreeze/DingGe/raw/Dev/Document/项目图片2.jpg" height=403px weight=225>
-<img src="https://github.com/framefreeze/DingGe/raw/Dev/Document/项目图片3.jpg" height=403px weight=225>
+<img src="https://github.com/framefreeze/DingGe/raw/Dev/Document/项目图片1.jpg" height=367px weight=205> 
+<img src="https://github.com/framefreeze/DingGe/raw/Dev/Document/项目图片2.jpg" height=367px weight=205>
+<img src="https://github.com/framefreeze/DingGe/raw/Dev/Document/项目图片3.jpg" height=367px weight=205>
 
 
 ###特性
@@ -23,6 +23,7 @@
 
 ###原理说明
 内核为ver1.0.4版本及更新的PCE_camera
+
 首先我们将照片的美学质量分为不同特征
 
 利用在线评估网站进行数据获取，对于网上进行评价的广大爱好者的评判进行处理，进行机器学习，生成属于PCE_camera自己的评分算法。调用相机情况下，调用生成的评估算法进行打分。
@@ -54,4 +55,6 @@ Ver2.0.0即将上线，新增功能如下
 2.新增拍照模式，提供选择自动抓拍功能
 
 3.提供了更加完善的后期修饰接口，可根据个人喜好，决定最终照片呈现效果
+
+4.相片打印机实时链接正在准备中
 
