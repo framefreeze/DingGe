@@ -4,7 +4,8 @@
 //
 //  Created by Kevin_Feng on 16/4/23.
 //  Copyright © 2016年 FrameFreeze. All rights reserved.
-//
+//$(PRODUCT_BUNDLE_IDENTIFIER)
+//$(PRODUCT_NAME)
 
 import WatchKit
 import Foundation
@@ -23,7 +24,7 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate{
     }
     @IBAction func takePhotoButtonClick() {
         try! WCSession.defaultSession().updateApplicationContext(["a":true])
-//        scoreWKLabel.setText("success")
+        scoreWKLabel.setText("success")
     }
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
