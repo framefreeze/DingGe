@@ -83,6 +83,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //        if WCSession.isSupported(){
 //            session = WCSession.defaultSession()
 //            if  session.watchAppInstalled == true{
+<<<<<<< HEAD
 //                NSLog("wAppisInstalled")
 //                session.delegate = self
 //                session.activateSession()
@@ -90,6 +91,12 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //            let asession = session where session.paired && session.watchAppInstalled
 //        }
         startSession()
+=======
+//                session.delegate = self
+//                session.activateSession()
+//            }
+//        }
+>>>>>>> origin/K's-work
         if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == false){
             autoTakePhotoButton.setTitle("手动", forState: UIControlState.Normal)
         }
@@ -340,7 +347,11 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     tmp_score = 100*log10(10*(Score-20)+1);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
+<<<<<<< HEAD
 //                    if self.session.watchAppInstalled == true{
+=======
+//                    if self.session.watchAppInstalled {
+>>>>>>> origin/K's-work
 //                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
 //                    }
 
@@ -354,8 +365,13 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     //tmp_score = 100*(Score);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
+<<<<<<< HEAD
 //                    if self.session.watchAppInstalled == true{
                         try! self.session!.updateApplicationContext(["Score":tmp_score2]);
+=======
+//                    if self.session.watchAppInstalled{
+//                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
+>>>>>>> origin/K's-work
 //                    }
 
                     self.cameraScoreLabel.text="三分线: \(tmp_score2)"

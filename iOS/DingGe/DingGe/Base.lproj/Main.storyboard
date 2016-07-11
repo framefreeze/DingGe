@@ -243,55 +243,64 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcx-2l-12F">
                                 <rect key="frame" x="0.0" y="507" width="600" height="93"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RwE-ec-sMh">
-                                        <rect key="frame" x="0.0" y="0.0" width="276" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-TO-8kq">
-                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="pHc-Al-fAI"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAr-TX-wuh">
-                                                <rect key="frame" x="46" y="0.0" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="j0L-KQ-GKb"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9F-hF-svB">
-                                                <rect key="frame" x="92" y="0.0" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="ENf-MI-vlW"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNZ-Oo-MJj">
-                                                <rect key="frame" x="138" y="0.0" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="tcl-2m-NJh"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9t-wp-HDd">
-                                                <rect key="frame" x="184" y="0.0" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="Bd8-V9-2Vo"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h85-ls-oUx">
-                                                <rect key="frame" x="230" y="0.0" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="4jU-Dk-yDI"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-TO-8kq">
+                                        <rect key="frame" x="36" y="25" width="50" height="44"/>
+                                        <state key="normal" image="10"/>
+                                        <connections>
+                                            <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="pHc-Al-fAI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9F-hF-svB">
+                                        <rect key="frame" x="135" y="24" width="104" height="45"/>
+                                        <state key="normal" image="12"/>
+                                        <connections>
+                                            <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="ENf-MI-vlW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNZ-Oo-MJj">
+                                        <rect key="frame" x="191" y="24" width="104" height="45"/>
+                                        <state key="normal" image="13"/>
+                                        <connections>
+                                            <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="tcl-2m-NJh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9t-wp-HDd">
+                                        <rect key="frame" x="245" y="25" width="104" height="44"/>
+                                        <state key="normal" image="14"/>
+                                        <connections>
+                                            <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="Bd8-V9-2Vo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h85-ls-oUx">
+                                        <rect key="frame" x="327" y="24" width="104" height="45"/>
+                                        <state key="normal" image="15"/>
+                                        <connections>
+                                            <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="4jU-Dk-yDI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAr-TX-wuh">
+                                        <rect key="frame" x="73" y="25" width="104" height="44"/>
+                                        <state key="normal" image="11"/>
+                                        <connections>
+                                            <action selector="applyFilter:" destination="O4O-Kr-gC8" eventType="touchUpInside" id="j0L-KQ-GKb"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.75686274509999996" green="0.80392156859999997" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="h85-ls-oUx" firstAttribute="centerY" secondItem="fcx-2l-12F" secondAttribute="centerY" id="8sm-0G-5at"/>
+                                    <constraint firstItem="yAr-TX-wuh" firstAttribute="leading" secondItem="fcx-2l-12F" secondAttribute="leading" constant="69" id="Phv-bg-DFk"/>
+                                    <constraint firstItem="yAr-TX-wuh" firstAttribute="centerY" secondItem="fcx-2l-12F" secondAttribute="centerY" id="Vf3-hS-5UU"/>
+                                    <constraint firstItem="J9t-wp-HDd" firstAttribute="leading" secondItem="fcx-2l-12F" secondAttribute="leading" constant="256" id="XLq-Vx-lJs"/>
+                                    <constraint firstItem="h85-ls-oUx" firstAttribute="leading" secondItem="fcx-2l-12F" secondAttribute="leading" constant="319" id="cS5-D1-J4f"/>
+                                    <constraint firstItem="m9F-hF-svB" firstAttribute="centerY" secondItem="fcx-2l-12F" secondAttribute="centerY" id="edh-iR-5xr"/>
+                                    <constraint firstItem="dNZ-Oo-MJj" firstAttribute="centerY" secondItem="fcx-2l-12F" secondAttribute="centerY" id="gSK-80-KeX"/>
+                                    <constraint firstItem="J9t-wp-HDd" firstAttribute="centerY" secondItem="fcx-2l-12F" secondAttribute="centerY" id="pNO-sc-NiM"/>
+                                    <constraint firstItem="v1e-TO-8kq" firstAttribute="centerY" secondItem="fcx-2l-12F" secondAttribute="centerY" id="qYx-qs-tpT"/>
+                                    <constraint firstItem="dNZ-Oo-MJj" firstAttribute="leading" secondItem="fcx-2l-12F" secondAttribute="leading" constant="194" id="u4a-mg-Osh"/>
+                                    <constraint firstItem="m9F-hF-svB" firstAttribute="leading" secondItem="fcx-2l-12F" secondAttribute="leading" constant="131" id="uP0-47-EKh"/>
+                                    <constraint firstItem="v1e-TO-8kq" firstAttribute="leading" secondItem="fcx-2l-12F" secondAttribute="leading" constant="6" id="weE-11-IqP"/>
+                                </constraints>
                             </view>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9ND-Fl-6sq">
                                 <rect key="frame" x="190" y="299" width="347" height="2"/>
@@ -325,6 +334,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="10" width="50" height="44"/>
+        <image name="11" width="50" height="44"/>
+        <image name="12" width="50" height="45"/>
+        <image name="13" width="50" height="45"/>
+        <image name="14" width="50" height="45"/>
+        <image name="15" width="50" height="44"/>
         <image name="cameraBack" width="24" height="22"/>
         <image name="cameraGallery" width="56" height="53"/>
         <image name="filter" width="52" height="50"/>
