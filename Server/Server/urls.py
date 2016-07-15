@@ -18,9 +18,12 @@ from django.contrib import admin
 from DinggeServer import views as DSV
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^index',DSV.index),
     url(r'^mark', DSV.mark),
+    url(r'^upload',DSV.upload),
     #url(r'^test1',DSV.test),
-    url(r'^test1',DSV.test1)
+    url(r'^test1',DSV.test1),
+    url(r'',DSV.index)
 #    url(r'upload'),
 #    url(r'evaluate'),
 #    url(r'pic')

@@ -6,8 +6,17 @@ from PIL import Image
 from django.views.decorators.csrf import csrf_exempt
 from . import forms as DSF
 # Create your views here.
+def index(req):
+    return render(req,'index.html',locals())
 def mark(req):
     return render(req,'mark.html',locals())
+def upload(req):
+    if(req.method == 'POST'):
+        return render(req, 'mark.html', locals())
+    else:
+        form = DSF.PicForm()
+        #form = form.label_suffix
+    return render(req,'upload.html',{'form':form})
 def test(req):
     #c={}
     #c.update()
