@@ -50,7 +50,20 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     var accelerationX:CGFloat!
     var accelerationY:CGFloat!
     var accelerationZ:CGFloat!
-    var session:WCSession!
+    private let session: WCSession? = WCSession.isSupported() ? WCSession.defaultSession() : nil
+    private var validSession: WCSession? {
+        
+        // paired - the user has to have their device paired to the watch
+        // watchAppInstalled - the user must have your watch app installed
+        
+        // Note: if the device is paired, but your watch app is not installed
+        // consider prompting the user to install it for a better experience
+        
+        if let session = session where session.paired && session.watchAppInstalled {
+            return session
+        }
+        return nil
+    }
     //图片存储单例类
     var CPhoto:cameraPhoto!
     override func viewDidLoad() {//界面加载完成时调用
@@ -70,10 +83,20 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //        if WCSession.isSupported(){
 //            session = WCSession.defaultSession()
 //            if  session.watchAppInstalled == true{
+<<<<<<< HEAD
+//                NSLog("wAppisInstalled")
+//                session.delegate = self
+//                session.activateSession()
+//            }
+//            let asession = session where session.paired && session.watchAppInstalled
+//        }
+        startSession()
+=======
 //                session.delegate = self
 //                session.activateSession()
 //            }
 //        }
+>>>>>>> origin/K's-work
         if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == false){
             autoTakePhotoButton.setTitle("手动", forState: UIControlState.Normal)
         }
@@ -107,7 +130,11 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
             cmm.stopAccelerometerUpdates()
         }
     }
-
+    //开启watch功能
+    func startSession() {
+        session?.delegate = self
+        session?.activateSession()
+    }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if(isFilterOpen){
             filterButtonContainer.hidden=true;
@@ -320,7 +347,11 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     tmp_score = 100*log10(10*(Score-20)+1);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
+<<<<<<< HEAD
+//                    if self.session.watchAppInstalled == true{
+=======
 //                    if self.session.watchAppInstalled {
+>>>>>>> origin/K's-work
 //                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
 //                    }
 
@@ -334,8 +365,13 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     //tmp_score = 100*(Score);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
+<<<<<<< HEAD
+//                    if self.session.watchAppInstalled == true{
+                        try! self.session!.updateApplicationContext(["Score":tmp_score2]);
+=======
 //                    if self.session.watchAppInstalled{
 //                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
+>>>>>>> origin/K's-work
 //                    }
 
                     self.cameraScoreLabel.text="三分线: \(tmp_score2)"
