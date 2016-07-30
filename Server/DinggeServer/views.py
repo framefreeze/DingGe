@@ -1,15 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django import template
-from PIL import ImageFile
+#from PIL import ImageFile
 from PIL import Image
 from django.views.decorators.csrf import csrf_exempt
 from . import forms as DSF
+from . import models as DSM
+#from DinggeServer.forms import testPicInfo
 # Create your views here.
 def index(req):
     return render(req,'index.html',locals())
 def mark(req):
     return render(req,'mark.html',locals())
+
 def upload(req):
     if(req.method == 'POST'):
         return render(req, 'mark.html', locals())
@@ -17,7 +20,8 @@ def upload(req):
         form = DSF.PicForm()
         #form = form.label_suffix
     return render(req,'upload.html',{'form':form})
-def test(req):
+
+def testz(req):
     #c={}
     #c.update()
     print(1)
@@ -34,6 +38,7 @@ def test(req):
     print(4)
     #img.save('test.png')
     return render(req,'mark.html',locals())
+
 def test1(req):
     """
      if req.method == 'POST':
@@ -60,7 +65,7 @@ def test1(req):
         if form.is_valid():
             print(1)
             pic = Image.open(req.FILES["pic"])
-            pic.show()
+            #pic.show()
             pic.save('test2.png')
             return render(req, 'mark.html', locals())
         print(2)
@@ -69,3 +74,30 @@ def test1(req):
         form = DSF.PicForm()
     return render(req,'test.html',{'form':form})
 
+def test2(req):
+    if req.method == 'POST':
+        form = DSF.testPicInfo(req.POST)
+        print(1)
+        #print(form.Meta.model.objects.all())
+
+        if form.is_valid():
+            print(2)
+            form.save()
+            #examInfo = form.save()
+            #examInfo.save()
+            print("saved")
+            emps = DSM.testSQl.objects.all()
+            return render(req,'testSQL.html',{'emps':emps})
+    else:
+        form = DSF.testPicInfo()
+        #return render(req,'mark.html',locals())
+    return render(req,'upload.html',{'form':form})
+def test3(req):
+    if req.method == 'POST':
+        form = DSF.PicForm(req.POST,req.FILES)
+        if form.is_valid():
+            pic = Image.open(req.FILES["pic"])
+            pic.show()
+            formInfo = DSM.testSQl
+            formInfo.save()
+            #pic.save()
