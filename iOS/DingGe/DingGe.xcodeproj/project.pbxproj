@@ -365,15 +365,15 @@
 				TargetAttributes = {
 					0A21A4261CCBBD8600B3139B = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = D5HF3C53NT;
+						DevelopmentTeam = 7AVDNX29VL;
 					};
 					0A21A4321CCBBD8600B3139B = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = D5HF3C53NT;
+						DevelopmentTeam = 7AVDNX29VL;
 					};
 					0AF618261CC3D8AA00977F4F = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = D5HF3C53NT;
+						DevelopmentTeam = 7AVDNX29VL;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 0;
@@ -558,11 +558,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = DingGeforWahch_Extension;
 				INFOPLIST_FILE = DingGeforWahch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = Dingge.framefreeze.watchkitextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -575,11 +577,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = DingGeforWahch_Extension;
 				INFOPLIST_FILE = DingGeforWahch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = Dingge.framefreeze.watchkitextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -594,7 +598,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DingGeforWahch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = Dingge.framefreeze.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
@@ -611,7 +615,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DingGeforWahch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = Dingge.framefreeze.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
@@ -718,7 +722,7 @@
 				INFOPLIST_FILE = DingGe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2;
+				PRODUCT_BUNDLE_IDENTIFIER = Dingge.framefreeze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DingGe/DingGe-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -739,7 +743,7 @@
 				INFOPLIST_FILE = DingGe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGe2;
+				PRODUCT_BUNDLE_IDENTIFIER = Dingge.framefreeze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DingGe/DingGe-Bridging-Header.h";
 			};
@@ -763,7 +767,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DingGeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = Dingge.framefreeze.DingGeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DingGe.app/DingGe";
 			};
@@ -774,7 +778,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = DingGeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = Dingge.framefreeze.DingGeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = DingGe;
 			};
@@ -785,7 +789,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = DingGeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.FrameFreeze.DingGeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = Dingge.framefreeze.DingGeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = DingGe;
 			};
