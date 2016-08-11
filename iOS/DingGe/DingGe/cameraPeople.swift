@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import UIKit
-import AVFoundation
+import UIKitimport AVFoundation
 import AssetsLibrary
 import CoreMotion
 import WatchConnectivity
