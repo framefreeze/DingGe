@@ -83,20 +83,11 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //        if WCSession.isSupported(){
 //            session = WCSession.defaultSession()
 //            if  session.watchAppInstalled == true{
-<<<<<<< HEAD
-//                NSLog("wAppisInstalled")
-//                session.delegate = self
-//                session.activateSession()
-//            }
-//            let asession = session where session.paired && session.watchAppInstalled
-//        }
-        startSession()
-=======
+
 //                session.delegate = self
 //                session.activateSession()
 //            }
 //        }
->>>>>>> origin/K's-work
         if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == false){
             autoTakePhotoButton.setTitle("手动", forState: UIControlState.Normal)
         }
