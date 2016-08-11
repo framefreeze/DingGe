@@ -17,11 +17,15 @@ var uiimage2:UIImage!
 class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDelegate, WCSessionDelegate{
     @IBOutlet weak var cameraScoreLabel: UILabel!//打分类 显示分数
     @IBOutlet weak var cameraUIView: UIImageView!//显示图片
-//    @IBOutlet var filterButtonContainer: UIView!// 滤镜容器
+    @IBOutlet var filterButtonContainer: UIView!// 滤镜容器
     @IBOutlet var cameraBackButton: UIButton!//返回按钮
     @IBOutlet var cameraRecordsButton: UIButton!//拍照按钮
     @IBOutlet var cameraProgressView: UIProgressView!//打分进度条(暂时不用）
+<<<<<<< HEAD
 //    @IBOutlet var ScoreBarView: UIProgressView!
+=======
+    @IBOutlet var autoTakePhotoButton: UIButton!
+>>>>>>> Dev
     @IBOutlet var cameraFilterButton: UIButton!//滤镜按钮
     var cameraCaptureDevice:AVCaptureDevice!
     var cameraCaptureSession:AVCaptureSession!//拍照序列
@@ -36,7 +40,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         return CIContext(EAGLContext: eaglContext, options: options)
     }()//拍照用的
     lazy var filterNames: [String] = {
-        return ["CIColorInvert","CIPhotoEffectMono","CIPhotoEffectInstant","CIPhotoEffectTransfer"]
+        return ["CIMedianFilter","CIPhotoEffectChrome","CIPhotoEffectInstant","CIPhotoEffectTransfer","CINoiseReduction","CIColorControls","CITemperatureAndTint","CIColorCrossPolynomial","CIColorCubeWithColorSpace"]
     }()//滤镜库
     
     var cameraCIImage:CIImage!//拍照用的
@@ -49,7 +53,20 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     var accelerationX:CGFloat!
     var accelerationY:CGFloat!
     var accelerationZ:CGFloat!
-    
+    private let session: WCSession? = WCSession.isSupported() ? WCSession.defaultSession() : nil
+    private var validSession: WCSession? {
+        
+        // paired - the user has to have their device paired to the watch
+        // watchAppInstalled - the user must have your watch app installed
+        
+        // Note: if the device is paired, but your watch app is not installed
+        // consider prompting the user to install it for a better experience
+        
+        if let session = session where session.paired && session.watchAppInstalled {
+            return session
+        }
+        return nil
+    }
     //图片存储单例类
     var CPhoto:cameraPhoto!
     override func viewDidLoad() {//界面加载完成时调用
@@ -62,10 +79,11 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 
         cmm = CMMotionManager()
         CPhoto=cameraPhoto()
-//        filterButtonContainer.hidden = true
+        filterButtonContainer.hidden = true
 //        cameraProgressView.progress = 0.5(横向进度条暂停使用）
         cameraProgressView.transform = CGAffineTransformRotate(cameraProgressView.transform, CGFloat(-M_PI_2))
         cameraProgressView.transform = CGAffineTransformScale(cameraProgressView.transform, CGFloat(1),CGFloat(2))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -79,6 +97,22 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 <<<<<<< HEAD
 >>>>>>> Dev
 =======
+>>>>>>> Dev
+=======
+//        if WCSession.isSupported(){
+//            session = WCSession.defaultSession()
+//            if  session.watchAppInstalled == true{
+
+//                session.delegate = self
+//                session.activateSession()
+//            }
+//        }
+        if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == false){
+            autoTakePhotoButton.setTitle("手动", forState: UIControlState.Normal)
+        }
+        else{
+            autoTakePhotoButton.setTitle("自动", forState: UIControlState.Normal)
+        }
 >>>>>>> Dev
     }
     
@@ -107,10 +141,14 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
             cmm.stopAccelerometerUpdates()
         }
     }
-
+    //开启watch功能
+    func startSession() {
+        session?.delegate = self
+        session?.activateSession()
+    }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if(isFilterOpen){
-//            filterButtonContainer.hidden=true;
+            filterButtonContainer.hidden=true;
             isFilterOpen=false;
         }
         else{
@@ -127,7 +165,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //    @IBAction func switchFilters(sender: AnyObject) {
 //    }
     @IBAction func openFilters(sender: AnyObject) {
-//        filterButtonContainer.hidden=false
+        filterButtonContainer.hidden=false
         isFilterOpen=true;
     }
     @IBAction func applyFilter(sender: UIButton) {//使用滤镜
@@ -258,8 +296,23 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         CPhoto.saveImage(self.cameraUIView.image!)
         self.cameraCaptureSession.startRunning()
     }
+<<<<<<< HEAD
     
 
+=======
+
+    @IBAction func switchAutoTakePicture(sender: AnyObject) {
+        print(sender.currentTitle as String?!)
+        if sender.currentTitle as String?! == "自动"{
+            sender.setTitle("手动", forState: UIControlState.Normal)
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "AutoTakePicture")
+        }
+        else{
+            sender.setTitle("自动", forState: UIControlState.Normal)
+            NSUserDefaults.standardUserDefaults().setBool(true,forKey: "AutoTakePicture")
+        }
+    }
+>>>>>>> Dev
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {//视频流监测
         self.countframe = self.countframe + 1
         if self.countframe > 30000 {self.countframe = 1}
@@ -310,6 +363,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     tmp_score = 100*log10(10*(Score-20)+1);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
+<<<<<<< HEAD
                     self.cameraScoreLabel.text="mid Score: \(tmp_score2)"
                 }
 <<<<<<< HEAD
@@ -329,6 +383,18 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 =======
 =======
 >>>>>>> Dev
+=======
+<<<<<<< HEAD
+//                    if self.session.watchAppInstalled == true{
+=======
+//                    if self.session.watchAppInstalled {
+>>>>>>> origin/K's-work
+//                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
+//                    }
+
+                    self.cameraScoreLabel.text="对称: \(tmp_score2)"
+                }
+>>>>>>> Dev
                 else if Score == 0.0{
                     self.cameraScoreLabel.text="Score:"
                 }
@@ -337,6 +403,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     //tmp_score = 100*(Score);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
+<<<<<<< HEAD
                     //                        tmp_score = Score*30
                     //                        tmp_score += Double(rnd)
                     //                        tmp_score = floor(tmp_score)
@@ -348,6 +415,24 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     if arc4random()%20 == 10 {
                         self.CPhoto.saveImage(self.cameraUIView.image!)
                         uiimage = self.cv.full_white(uiimage);
+=======
+<<<<<<< HEAD
+//                    if self.session.watchAppInstalled == true{
+                        try! self.session!.updateApplicationContext(["Score":tmp_score2]);
+=======
+//                    if self.session.watchAppInstalled{
+//                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
+>>>>>>> origin/K's-work
+//                    }
+
+                    self.cameraScoreLabel.text="三分线: \(tmp_score2)"
+                    
+                }
+                if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == true) && tmp_score >= 90{
+                   if arc4random()%20 == 10 {
+                        self.CPhoto.saveImage(self.cameraUIView.image!)
+                        uiimage2 = self.cv.full_white(uiimage);
+>>>>>>> Dev
                     }
                 }
                 
@@ -363,6 +448,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                 
             })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Dev
         })
         
@@ -372,6 +458,11 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         
     }
 =======
+>>>>>>> Dev
+=======
+        })
+        
+    }
 >>>>>>> Dev
 =======
         })

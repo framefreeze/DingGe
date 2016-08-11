@@ -11,9 +11,15 @@
 手机摄影爱好者的选择，让我们共建一个优秀的摄影App
 
 ####示例:  
+<<<<<<< HEAD
 <img src="https://kevinfeng.name/pic/demo1.jpg" height=367px weight=205> 
 <img src="https://kevinfeng.name/pic/demoindex.png" height=367px weight=205>
 <img src="https://kevinfeng.name/pic/demowatch.jpg" height=367px weight=205>
+=======
+<img src="https://github.com/framefreeze/DingGe/raw/Dev/Document/项目图片1.jpg" height=367px weight=205> 
+<img src="https://github.com/framefreeze/DingGe/raw/Dev/Document/项目图片2.jpg" height=367px weight=205>
+<img src="https://github.com/framefreeze/DingGe/raw/Dev/Document/项目图片3.jpg" height=367px weight=205>
+>>>>>>> Dev
 
 
 ###特性
@@ -61,4 +67,8 @@ Ver2.0.0即将上线，新增功能如下
 
 3.提供了更加完善的后期修饰接口，可根据个人喜好，决定最终照片呈现效果
 
+<<<<<<< HEAD
+=======
+4.相片打印机实时链接正在准备中
+>>>>>>> Dev
 
