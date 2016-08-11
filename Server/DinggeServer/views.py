@@ -1,3 +1,4 @@
+import random
 from django.shortcuts import render
 from django.http import HttpResponse
 from django import template
@@ -6,12 +7,21 @@ from PIL import Image
 from django.views.decorators.csrf import csrf_exempt
 from . import forms as DSF
 from . import models as DSM
+from django.db import connection
 #from DinggeServer.forms import testPicInfo
 # Create your views here.
 def index(req):
     return render(req,'index.html',locals())
 def mark(req):
-    return render(req,'mark.html',locals())
+    if req.method == 'POST':
+        form = DSF
+    cursor = connection.cursor()
+    cursor.execute('select count(*) from DinggeServer_picinfo;')
+    row = cursor.fetchone()
+    p = row[0]
+    rndId = random.randint(1,p)
+
+    return render(req,'mark.html',{'markPic':"pic/"+str(rndId)+".jpg"})
 
 def upload(req):
     if(req.method == 'POST'):
@@ -86,7 +96,7 @@ def test2(req):
             #examInfo = form.save()
             #examInfo.save()
             print("saved")
-            emps = DSM.testSQl.objects.all()
+            emps = DSM.PicInfo.objects.all()
             return render(req,'testSQL.html',{'emps':emps})
     else:
         form = DSF.testPicInfo()
@@ -97,7 +107,30 @@ def test3(req):
         form = DSF.PicForm(req.POST,req.FILES)
         if form.is_valid():
             pic = Image.open(req.FILES["pic"])
-            pic.show()
-            formInfo = DSM.testSQl
-            formInfo.save()
+            #pic.show()
+            #print(pic.getpixel())
+            x = pic.size[0]
+            y = pic.size[1]
+            #(x,y)=pic.
+            hw = DSM.PicInfo.objects.create(ImgH=y,ImgW=x)
+
+            # getpixel()
+            #print(x)
+            #print(y)
             #pic.save()
+            emps = DSM.PicInfo.objects.values('id','ImgH','ImgW')
+            cursor = connection.cursor()
+            cursor.execute('select count(*) from DinggeServer_picinfo;')
+            row = cursor.fetchone()
+            p = row[0]
+            print(row)
+            print(p)
+            #imgName = str(p)+".png"
+            imgName = "DinggeServer/static/pic/"+str(p)+".jpg"
+            pic.save(imgName)#这个代码已经实现了 还差一个路径 由于static/pic已经有文件了 所以没再更改 正式上线的时候就好了
+            #p = DSM.testSQl.objects.raw('select count(id) from DinggeServer_testsql;')
+            #print(p)
+            return render(req,'testSQL.html',{'emps':emps})
+    else:
+        form=DSF.PicForm(req.POST,req.FILES)
+    return render(req,'upload.html',{'form':form})

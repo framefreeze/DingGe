@@ -25,6 +25,7 @@ urlpatterns = [
 
     url(r'^test1',DSV.test1),
     url(r'^test2',DSV.test2),
+    url(r'^test3',DSV.test3),
     url(r'',DSV.index)
 #    url(r'upload'),
 #    url(r'evaluate'),

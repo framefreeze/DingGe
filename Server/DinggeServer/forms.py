@@ -8,11 +8,14 @@ class PicForm(forms.Form):
     #pic = forms.ImageField()
     #t = forms.CharField(label="b",max_length=100)
 
-class testSql(forms.Form):
-    model = models.testSQl
 
 class testPicInfo(ModelForm):
     class Meta:
-        model = models.testSQl
+        model = models.PicInfo
         #fields = ['ImgH','ImgW']
+        fields = '__all__'
+
+class markForm(ModelForm):
+    class Meta:
+        model = models.markData
         fields = '__all__'
