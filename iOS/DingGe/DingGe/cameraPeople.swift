@@ -22,7 +22,11 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     @IBOutlet var cameraRecordsButton: UIButton!//拍照按钮
     @IBOutlet var cameraProgressView: UIProgressView!//打分进度条(暂时不用）
 <<<<<<< HEAD
+<<<<<<< HEAD
 //    @IBOutlet var ScoreBarView: UIProgressView!
+=======
+    @IBOutlet var autoTakePhotoButton: UIButton!
+>>>>>>> Dev
 =======
     @IBOutlet var autoTakePhotoButton: UIButton!
 >>>>>>> Dev
@@ -86,6 +90,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> Dev
@@ -99,6 +104,8 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 =======
 >>>>>>> Dev
 =======
+=======
+>>>>>>> Dev
 //        if WCSession.isSupported(){
 //            session = WCSession.defaultSession()
 //            if  session.watchAppInstalled == true{
@@ -113,6 +120,9 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         else{
             autoTakePhotoButton.setTitle("自动", forState: UIControlState.Normal)
         }
+<<<<<<< HEAD
+>>>>>>> Dev
+=======
 >>>>>>> Dev
     }
     
@@ -297,9 +307,12 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         self.cameraCaptureSession.startRunning()
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
 =======
+=======
+>>>>>>> Dev
 
     @IBAction func switchAutoTakePicture(sender: AnyObject) {
         print(sender.currentTitle as String?!)
@@ -312,6 +325,9 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
             NSUserDefaults.standardUserDefaults().setBool(true,forKey: "AutoTakePicture")
         }
     }
+<<<<<<< HEAD
+>>>>>>> Dev
+=======
 >>>>>>> Dev
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {//视频流监测
         self.countframe = self.countframe + 1
@@ -364,6 +380,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
 <<<<<<< HEAD
+<<<<<<< HEAD
                     self.cameraScoreLabel.text="mid Score: \(tmp_score2)"
                 }
 <<<<<<< HEAD
@@ -395,6 +412,17 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     self.cameraScoreLabel.text="对称: \(tmp_score2)"
                 }
 >>>>>>> Dev
+=======
+//                    if self.session.watchAppInstalled == true{
+=======
+//                    if self.session.watchAppInstalled {
+>>>>>>> origin/K's-work
+//                        try! self.session.updateApplicationContext(["Score":tmp_score2]);
+//                    }
+
+                    self.cameraScoreLabel.text="对称: \(tmp_score2)"
+                }
+>>>>>>> Dev
                 else if Score == 0.0{
                     self.cameraScoreLabel.text="Score:"
                 }
@@ -403,6 +431,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     //tmp_score = 100*(Score);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
+<<<<<<< HEAD
 <<<<<<< HEAD
                     //                        tmp_score = Score*30
                     //                        tmp_score += Double(rnd)
@@ -417,6 +446,8 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                         uiimage = self.cv.full_white(uiimage);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Dev
 //                    if self.session.watchAppInstalled == true{
                         try! self.session!.updateApplicationContext(["Score":tmp_score2]);
 =======
@@ -432,6 +463,9 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                    if arc4random()%20 == 10 {
                         self.CPhoto.saveImage(self.cameraUIView.image!)
                         uiimage2 = self.cv.full_white(uiimage);
+<<<<<<< HEAD
+>>>>>>> Dev
+=======
 >>>>>>> Dev
                     }
                 }
@@ -449,6 +483,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
             })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Dev
         })
         
@@ -458,6 +493,11 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         
     }
 =======
+>>>>>>> Dev
+=======
+        })
+        
+    }
 >>>>>>> Dev
 =======
         })

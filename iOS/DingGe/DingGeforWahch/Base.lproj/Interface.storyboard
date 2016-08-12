@@ -14,7 +14,11 @@
                             <fontDescription key="font" type="system" pointSize="45"/>
                         </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <button width="1" alignment="left" title="Button" id="FoN-ax-Vyz">
+=======
+                        <button width="1" alignment="left" title="拍照" id="FoN-ax-Vyz">
+>>>>>>> Dev
 =======
                         <button width="1" alignment="left" title="拍照" id="FoN-ax-Vyz">
 >>>>>>> Dev

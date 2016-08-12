@@ -241,7 +241,10 @@
                                 </constraints>
                             </stackView>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Dev
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcx-2l-12F">
                                 <rect key="frame" x="0.0" y="507" width="600" height="93"/>
                                 <subviews>
@@ -304,6 +307,9 @@
                                     <constraint firstItem="v1e-TO-8kq" firstAttribute="leading" secondItem="fcx-2l-12F" secondAttribute="leading" constant="6" id="weE-11-IqP"/>
                                 </constraints>
                             </view>
+<<<<<<< HEAD
+>>>>>>> Dev
+=======
 >>>>>>> Dev
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9ND-Fl-6sq">
                                 <rect key="frame" x="190" y="299" width="347" height="2"/>
