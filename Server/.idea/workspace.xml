@@ -1,160 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bed02da-bde6-4a2d-a17e-a1221885e409" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/test1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test1.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/learn.css" afterPath="$PROJECT_DIR$/DinggeServer/static/learn.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/1.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/10.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/10.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/100.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/100.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/101.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/101.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/102.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/102.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/103.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/103.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/104.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/104.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/105.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/105.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/106.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/106.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/107.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/107.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/108.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/108.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/109.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/109.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/11.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/11.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/110.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/110.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/111.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/111.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/112.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/112.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/113.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/113.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/114.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/114.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/115.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/115.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/116.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/116.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/117.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/117.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/118.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/118.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/119.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/119.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/12.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/12.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/120.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/120.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/121.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/121.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/122.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/122.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/123.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/123.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/124.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/124.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/125.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/125.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/126.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/126.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/127.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/127.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/128.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/128.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/129.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/129.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/13.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/13.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/130.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/130.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/131.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/131.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/132.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/132.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/133.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/133.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/134.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/134.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/135.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/135.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/136.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/136.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/137.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/137.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/138.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/138.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/139.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/139.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/14.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/14.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/140.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/140.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/15.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/15.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/16.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/16.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/17.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/17.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/18.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/18.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/19.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/19.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/2.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/20.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/20.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/21.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/21.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/22.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/22.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/23.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/23.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/24.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/24.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/25.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/25.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/26.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/26.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/27.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/27.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/28.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/28.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/29.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/29.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/3.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/30.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/30.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/31.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/31.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/32.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/32.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/33.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/33.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/34.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/34.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/35.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/35.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/36.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/36.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/37.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/37.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/38.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/38.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/39.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/39.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/4.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/40.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/40.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/41.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/41.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/42.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/42.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/43.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/43.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/44.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/44.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/45.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/45.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/46.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/46.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/47.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/47.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/48.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/48.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/49.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/49.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/5.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/50.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/50.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/51.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/51.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/52.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/52.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/53.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/53.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/54.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/54.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/55.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/55.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/56.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/56.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/57.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/57.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/58.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/58.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/59.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/59.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/6.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/60.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/60.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/61.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/61.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/62.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/62.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/63.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/63.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/64.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/64.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/65.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/65.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/66.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/66.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/67.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/67.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/68.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/68.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/69.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/69.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/7.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/7.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/70.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/70.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/71.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/71.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/72.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/72.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/73.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/73.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/74.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/74.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/75.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/75.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/76.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/76.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/77.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/77.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/78.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/78.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/79.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/79.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/8.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/80.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/80.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/81.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/81.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/82.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/82.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/83.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/83.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/84.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/84.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/85.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/85.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/86.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/86.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/87.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/87.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/88.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/88.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/89.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/89.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/9.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/9.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/90.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/90.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/91.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/91.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/92.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/92.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/93.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/93.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/94.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/94.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/95.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/95.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/96.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/96.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/97.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/97.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/98.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/98.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/pic/99.jpg" afterPath="$PROJECT_DIR$/DinggeServer/static/pic/99.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test2.png" afterPath="$PROJECT_DIR$/DinggeServer/static/test2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DinggeServer/forms.py" afterPath="$PROJECT_DIR$/DinggeServer/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DinggeServer/models.py" afterPath="$PROJECT_DIR$/DinggeServer/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DinggeServer/views.py" afterPath="$PROJECT_DIR$/DinggeServer/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/settings.py" afterPath="$PROJECT_DIR$/Server/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/urls.py" afterPath="$PROJECT_DIR$/Server/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mark.html" afterPath="$PROJECT_DIR$/templates/mark.html" />
-    </list>
+    <list default="true" id="0bed02da-bde6-4a2d-a17e-a1221885e409" name="Default" comment="" />
     <ignored path="Server.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -167,9 +14,9 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Server$manage.coverage" NAME="manage Coverage Results" MODIFIED="1471025212658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Server$Test__db_sqlite3.coverage" NAME="Test: db.sqlite3 Coverage Results" MODIFIED="1469457447524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Server$settings.coverage" NAME="settings Coverage Results" MODIFIED="1468777889252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Server" />
-    <SUITE FILE_PATH="coverage/Server$manage.coverage" NAME="manage Coverage Results" MODIFIED="1470797297958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Server$wsgi.coverage" NAME="wsgi Coverage Results" MODIFIED="1468777884504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Server" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -183,97 +30,110 @@
     <favorites_list name="Server" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DinggeServer/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.1698112">
-              <caret line="114" column="56" selection-start-line="114" selection-start-column="56" selection-end-line="114" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1470798007000" expanded="true" signature="552:586" placeholder="select count... DinggeServer_testsql" />
-                <marker date="1470798007000" expanded="true" signature="552:593" placeholder="select count... DinggeServer_picinfo" />
-                <marker date="1470798007000" expanded="true" signature="3541:3575" placeholder="select count... DinggeServer_testsql" />
-                <marker date="1470798007000" expanded="true" signature="3541:3582" placeholder="select count... DinggeServer_picinfo" />
-                <marker date="1470798007000" expanded="true" signature="3915:3957" placeholder="select count... DinggeServer_testsql" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mark.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/mark.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.0">
-              <caret line="182" column="6" selection-start-line="182" selection-start-column="6" selection-end-line="182" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#2;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#5;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#6;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/upload.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.5">
-              <caret line="109" column="76" selection-start-line="109" selection-start-column="76" selection-end-line="109" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DinggeServer/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="related.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/django/db/models/fields/related.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="440" column="58" selection-start-line="440" selection-start-column="58" selection-end-line="440" selection-end-column="58" />
-              <folding>
-                <marker date="1468776897000" expanded="true" signature="6929:6975" placeholder="Update the r... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DinggeServer/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/DinggeServer/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="307">
+                  <caret line="28" column="89" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="89" />
+                  <folding>
+                    <element signature="e#0#13#0" expanded="true" />
+                    <marker date="1471026085378" expanded="true" signature="780:821" ph="select count... DinggeServer_picinfo" />
+                    <marker date="1471026085378" expanded="true" signature="3812:3853" ph="select count... DinggeServer_picinfo" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="mark.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/mark.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="128">
+                  <caret line="206" column="46" selection-start-line="206" selection-start-column="46" selection-end-line="206" selection-end-column="46" />
+                  <folding>
+                    <marker date="1471026085482" expanded="false" signature="5993:6005" ph="..." />
+                    <marker date="1471026085482" expanded="false" signature="6243:6255" ph="..." />
+                    <marker date="1471026085482" expanded="false" signature="6489:6501" ph="..." />
+                    <marker date="1471026085482" expanded="false" signature="6742:6754" ph="..." />
+                    <marker date="1471026085482" expanded="false" signature="7007:7019" ph="..." />
+                    <marker date="1471026085482" expanded="false" signature="7270:7282" ph="..." />
+                    <marker date="1471026085482" expanded="false" signature="7529:7541" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Server/settings.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="851">
+                  <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="upload.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/upload.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="782">
+                  <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/DinggeServer/forms.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="114">
+                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#24#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="fields.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/django/forms/fields.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/DinggeServer/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/DinggeServer/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="19">
+                  <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -293,22 +153,23 @@
         <option value="$USER_HOME$/Library/Python/3.5/lib/python/site-packages/django/db/models/fields/files.py" />
         <option value="$PROJECT_DIR$/Server/urls.py" />
         <option value="$PROJECT_DIR$/Server/settings.py" />
-        <option value="$PROJECT_DIR$/templates/mark.html" />
-        <option value="$PROJECT_DIR$/DinggeServer/models.py" />
-        <option value="$PROJECT_DIR$/DinggeServer/views.py" />
-        <option value="$PROJECT_DIR$/DinggeServer/forms.py" />
         <option value="$PROJECT_DIR$/templates/upload.html" />
+        <option value="$PROJECT_DIR$/DinggeServer/models.py" />
+        <option value="$PROJECT_DIR$/DinggeServer/forms.py" />
+        <option value="$PROJECT_DIR$/DinggeServer/views.py" />
+        <option value="$PROJECT_DIR$/templates/mark.html" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -335,8 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -417,6 +276,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -433,24 +294,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.manage">
-    <configuration default="false" name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Server" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
-      <option name="PARAMETERS" value="runserver 127.0.0.1:8000" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Test: db.sqlite3" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -469,6 +312,24 @@
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Kevin\AppData\Local\Programs\Python\Python35\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver 127.0.0.1:9000" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -563,7 +424,21 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="Server" />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
@@ -574,6 +449,7 @@
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
+      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
@@ -726,8 +602,8 @@
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.settings" />
       <item index="1" class="java.lang.String" itemvalue="Python.wsgi" />
-      <item index="2" class="java.lang.String" itemvalue="Python.manage" />
-      <item index="3" class="java.lang.String" itemvalue="Django tests.Test: db.sqlite3" />
+      <item index="2" class="java.lang.String" itemvalue="Django tests.Test: db.sqlite3" />
+      <item index="3" class="java.lang.String" itemvalue="Python.manage" />
     </list>
     <recent_temporary>
       <list size="2">
@@ -736,7 +612,9 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -745,6 +623,7 @@
       <changelist id="0bed02da-bde6-4a2d-a17e-a1221885e409" name="Default" comment="" />
       <created>1468307677213</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1468307677213</updated>
     </task>
     <servers />
@@ -782,17 +661,16 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15208334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.375969" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -802,6 +680,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -823,19 +702,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="e#22#31#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DinggeServer/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding />
         </state>
@@ -843,14 +712,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="e#639#671#0" expanded="false" />
@@ -860,14 +729,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -875,7 +744,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -883,14 +752,14 @@
     <entry file="file:///usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/suite.py" />
     <entry file="file://$PROJECT_DIR$/Server/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/django_test_manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
         </state>
       </provider>
@@ -907,7 +776,7 @@
     <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/PIL/__init__.py" />
     <entry file="file://$PROJECT_DIR$/DinggeServer/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
         </state>
       </provider>
@@ -916,23 +785,16 @@
     <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/django/db/models/base.py" />
     <entry file="file://$PROJECT_DIR$/templates/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm50/python_stubs/-1222287026/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="5070" column="8" selection-start-line="5070" selection-start-column="8" selection-end-line="5070" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm50/python_stubs/-1222287026/builtins.py" />
     <entry file="file://$PROJECT_DIR$/Server/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
           <folding>
             <element signature="e#639#671#0" expanded="false" />
@@ -940,16 +802,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/django/db/backends/oracle/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="506" column="8" selection-start-line="506" selection-start-column="8" selection-end-line="506" selection-end-column="8" />
-          <folding>
-            <marker date="1468776897000" expanded="true" signature="10404:10435" placeholder="SELECT 1 FRO... DUAL" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/django/db/backends/oracle/base.py" />
     <entry file="file://$PROJECT_DIR$/DinggeServer/static/pic/23.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -962,17 +815,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#31#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/test2saveSQL.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
+        <state relative-caret-position="0">
           <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding />
         </state>
@@ -980,20 +830,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/testSQL.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
+        <state relative-caret-position="0">
           <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/PIL/Image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="503" column="13" selection-start-line="503" selection-start-column="13" selection-end-line="503" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/PIL/Image.py" />
     <entry file="file://$PROJECT_DIR$/DinggeServer/static/pic/1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1044,85 +887,74 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/django/db/models/fields/related.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="440" column="58" selection-start-line="440" selection-start-column="58" selection-end-line="440" selection-end-column="58" />
-          <folding>
-            <marker date="1468776897000" expanded="true" signature="6929:6975" placeholder="Update the r... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/django/db/models/fields/related.py" />
+    <entry file="file:///usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/random.py" />
     <entry file="file://$PROJECT_DIR$/DinggeServer/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mark.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.0">
-          <caret line="182" column="6" selection-start-line="182" selection-start-column="6" selection-end-line="182" selection-end-column="6" />
+        <state relative-caret-position="114">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#2;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#5;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#6;n#form#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/settings.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/django/forms/fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9853249">
-          <caret line="722" column="21" selection-start-line="722" selection-start-column="21" selection-end-line="722" selection-end-column="21" />
+        <state relative-caret-position="195">
+          <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DinggeServer/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="399">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/upload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.5">
-          <caret line="109" column="76" selection-start-line="109" selection-start-column="76" selection-end-line="109" selection-end-column="76" />
+        <state relative-caret-position="782">
+          <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DinggeServer/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1698112">
-          <caret line="114" column="56" selection-start-line="114" selection-start-column="56" selection-end-line="114" selection-end-column="56" />
+        <state relative-caret-position="307">
+          <caret line="28" column="89" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="89" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1470798007000" expanded="true" signature="552:586" placeholder="select count... DinggeServer_testsql" />
-            <marker date="1470798007000" expanded="true" signature="552:593" placeholder="select count... DinggeServer_picinfo" />
-            <marker date="1470798007000" expanded="true" signature="3541:3575" placeholder="select count... DinggeServer_testsql" />
-            <marker date="1470798007000" expanded="true" signature="3541:3582" placeholder="select count... DinggeServer_picinfo" />
-            <marker date="1470798007000" expanded="true" signature="3915:3957" placeholder="select count... DinggeServer_testsql" />
+            <marker date="1471026085378" expanded="true" signature="780:821" ph="select count... DinggeServer_picinfo" />
+            <marker date="1471026085378" expanded="true" signature="3812:3853" ph="select count... DinggeServer_picinfo" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mark.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="206" column="46" selection-start-line="206" selection-start-column="46" selection-end-line="206" selection-end-column="46" />
+          <folding>
+            <marker date="1471026085482" expanded="false" signature="5993:6005" ph="..." />
+            <marker date="1471026085482" expanded="false" signature="6243:6255" ph="..." />
+            <marker date="1471026085482" expanded="false" signature="6489:6501" ph="..." />
+            <marker date="1471026085482" expanded="false" signature="6742:6754" ph="..." />
+            <marker date="1471026085482" expanded="false" signature="7007:7019" ph="..." />
+            <marker date="1471026085482" expanded="false" signature="7270:7282" ph="..." />
+            <marker date="1471026085482" expanded="false" signature="7529:7541" ph="..." />
           </folding>
         </state>
       </provider>
