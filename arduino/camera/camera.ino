@@ -40,7 +40,7 @@
 */
 
 #include <CurieIMU.h>
-#include <MadgwickAHRS.h>
+#include "MadgwickAHRS.h"
 
 Madgwick filter; // initialise Madgwick object
 int ax, ay, az;
