@@ -13,7 +13,15 @@
                         <label width="136" height="107.5" alignment="left" text="99" textAlignment="center" id="L9z-w0-7J3">
                             <fontDescription key="font" type="system" pointSize="45"/>
                         </label>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        <button width="1" alignment="left" title="Button" id="FoN-ax-Vyz">
+=======
                         <button width="1" alignment="left" title="拍照" id="FoN-ax-Vyz">
+>>>>>>> Dev
+=======
+                        <button width="1" alignment="left" title="拍照" id="FoN-ax-Vyz">
+>>>>>>> Dev
                             <connections>
                                 <action selector="takePhotoButtonClick" destination="AgC-eL-Hgc" id="mhm-Nn-X7j"/>
                             </connections>

@@ -64,7 +64,15 @@ class settingsView: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBAction func settingSwitchValueChange(sender: AnyObject) {
 //        print(sender.indexPath.row)
+<<<<<<< HEAD
+<<<<<<< HEAD
+        if(NSUserDefaults.standardUserDefaults().boolForKey("AutoHidden")as Bool! == false){
+=======
         if(sender.on == false){
+>>>>>>> Dev
+=======
+        if(sender.on == false){
+>>>>>>> Dev
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "AutoHidden")
         }
         else{
