@@ -14,7 +14,7 @@ void setup()
   
   /*Set my serial port to same as Arduino, baud rate 9600*/
   // The serial port  
-  myPort = new Serial(this, Serial.list()[5], 9600); // if you have only ONE COM port active
+  myPort = new Serial(this, Serial.list()[2], 9600); // if you have only ONE COM port active
   //myPort = new Serial(this, "COM5", 9600);  // if you know the 101 COM port
 
   textSize(16); // set text size
