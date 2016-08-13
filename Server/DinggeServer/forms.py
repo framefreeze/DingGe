@@ -19,3 +19,12 @@ class markForm(ModelForm):
     class Meta:
         model = models.markData
         fields = '__all__'
+        widgets = {
+            'picId' : forms.HiddenInput(attrs = {'id':"PicId"}),
+            'mainStX': forms.HiddenInput(attrs = {'id':"MainSTX",'class':'form-control'}),
+            'mainStY': forms.HiddenInput(attrs = {'id':"MainSTY",'class':'form-control'}),
+            'mainEdX': forms.HiddenInput(attrs={'id': "MainEDX", 'class': 'form-control'}),
+            'mainEdY': forms.HiddenInput(attrs={'id': "MainEDY", 'class': 'form-control'}),
+            'Score'  : forms.NumberInput(attrs = {'id':"Score",'class':'form-control','max':"3",'min':"1"})
+        }
+

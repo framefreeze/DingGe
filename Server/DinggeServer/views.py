@@ -14,14 +14,19 @@ def index(req):
     return render(req,'index.html',locals())
 def mark(req):
     if req.method == 'POST':
-        form = DSF
-    cursor = connection.cursor()
-    cursor.execute('select count(*) from DinggeServer_picinfo;')
-    row = cursor.fetchone()
-    p = row[0]
-    rndId = random.randint(1,p)
-
-    return render(req,'mark.html',{'markPic':"pic/"+str(rndId)+".jpg"})
+        form = DSF.markForm(req.POST)
+        if form.is_valid():
+            form.save()
+            emps = DSM.markData.objects.all()
+            return render(req, 'testSQL.html', {'emps': emps})
+    else:
+        form = DSF.markForm()
+        cursor = connection.cursor()
+        cursor.execute('select count(*) from DinggeServer_picinfo;')
+        row = cursor.fetchone()
+        p = row[0]
+        rndId = random.randint(1, p)
+    return render(req,'mark.html',{'markPic':"pic/"+str(rndId)+".jpg",'form':form,'picid':str(rndId)})
 
 def upload(req):
     if(req.method == 'POST'):
