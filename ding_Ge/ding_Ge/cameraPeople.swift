@@ -16,6 +16,7 @@ import WatchConnectivity
 var Score = 0.0
 var uiimage2:UIImage!
 class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDelegate, WCSessionDelegate{
+    var sessionWC = WCSession.defaultSession()
     @IBOutlet weak var cameraScoreLabel: UILabel!//打分类 显示分数
     @IBOutlet weak var cameraUIView: UIImageView!//显示图片
     @IBOutlet var filterButtonContainer: UIView!// 滤镜容器
@@ -50,6 +51,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     var accelerationX:CGFloat!
     var accelerationY:CGFloat!
     var accelerationZ:CGFloat!
+    /*
     private let session: WCSession? = WCSession.isSupported() ? WCSession.defaultSession() : nil
     private var validSession: WCSession? {
         
@@ -63,7 +65,7 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
             return session
         }
         return nil
-    }
+    }*/
     //图片存储单例类
     var CPhoto:cameraPhoto!
     override func viewDidLoad() {//界面加载完成时调用
@@ -89,13 +91,16 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
 //            }
 //            let asession = session where session.paired && session.watchAppInstalled
 //        }
-        startSession()
+        //startSession()
         if(NSUserDefaults.standardUserDefaults().boolForKey("AutoTakePicture") as Bool == false){
             autoTakePhotoButton.setTitle("手动", forState: UIControlState.Normal)
         }
         else{
             autoTakePhotoButton.setTitle("自动", forState: UIControlState.Normal)
         }
+        //WCSession
+        sessionWC.delegate = self
+        sessionWC.activateSession()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -124,10 +129,11 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         }
     }
     //开启watch功能
+    /*
     func startSession() {
         session?.delegate = self
         session?.activateSession()
-    }
+    }*/
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if(isFilterOpen){
             filterButtonContainer.hidden=true;
@@ -267,15 +273,18 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
     @IBAction func takePicture(sender: UIButton) {//模拟相机动作
         sender.enabled = false
         self.cameraCaptureSession.stopRunning()
-        sleep(1)
+        self.cameraUIView.image = cv.full_white(self.cameraUIView.image!)
+        //sleep(1)
         CPhoto.saveImage(self.cameraUIView.image!)
         sender.enabled = true
         self.cameraCaptureSession.startRunning()
     }
     func takePicture(){
         self.cameraCaptureSession.stopRunning()
+        //self.cameraUIView.image = cv.full_white(self.cameraUIView.image!)
         sleep(1)
         CPhoto.saveImage(self.cameraUIView.image!)
+        self.cameraUIView.image = cv.full_white(self.cameraUIView.image!)
         self.cameraCaptureSession.startRunning()
     }
 
@@ -355,9 +364,10 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
                     //tmp_score = 100*(Score);
                     tmp_score = floor(tmp_score)
                     tmp_score2 = floor(tmp_score/5)*5
-//                    if self.session.watchAppInstalled == true{
-//                        try! self.session!.updateApplicationContext(["Score":tmp_score2]);
-//                    }
+                    if self.sessionWC.watchAppInstalled == true{
+                        try! self.sessionWC.updateApplicationContext(["Score":tmp_score2]);
+                        NSLog("sendScore")
+                    }
 
                     self.cameraScoreLabel.text="三分线: \(tmp_score2)"
                     
@@ -383,6 +393,28 @@ class cameraPeople: UIViewController , AVCaptureVideoDataOutputSampleBufferDeleg
         })
         
     }
+//    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+//        NSLog("getMsg")
+//        print("getMSG")
+//        cameraScoreLabel.text = "get"
+//        var take = applicationContext["takePhoto"] as! Bool
+//        //Score.setText("\(num)")
+//        if take {
+//            cameraScoreLabel.text = "ing"
+//            //shakeDevice.playHaptic(WKHapticType.Notification)
+//            takePicture()
+//            cameraScoreLabel.text = "ed"
+//        }
+//    }
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+        var take = message["takePhoto"] as! Bool
+        if take {
+            //cameraScoreLabel.text = "ing"
+            takePicture()
+            //cameraScoreLabel.text = "ed"
+        }
+    }
+    
     
 }
 //extension cameraPeople{

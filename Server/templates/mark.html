@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 {% load staticfiles %}
 <img src="{%  static markPic %}" alt="My image"/>
 </body>
-</html>
+</html>-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,8 +141,9 @@
                     onmousemove="cnvs_getendpoint_move(event)"></canvas>
         </div>
     </div>
-    <form class="form-inline visible-lg visible-md" action="http://dingge.framefreeze.cn/learn_fit.php" method="post">
-        <div class="form-group">
+    <form class="form-inline visible-lg visible-md" action="mark" method="post">
+        {% csrf_token %}
+        <!--<div class="form-group">
             <label for="pic_num" class="control-label">图片编号</label>
             <input type="text" class="form-control" style="width: 60px;" readonly="readonly" name="pic_num" id="pic_num" placeholder="0">
         </div>
@@ -173,13 +174,14 @@
         <div class="form-group">
             <label for="score" class="control-label">分数: </label>
             <input type="number" class="form-control" name="score" id="score" max="3" min="1" placeholder="0">
-        </div>
+        </div>-->
+        {{ form }}
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
 </div>
 <script type="text/javascript">
     //var rnd = Math.floor(Math.random() * 140 + 1);
-    var pic_url = "pic/" + rnd.toString() + ".jpg";
+    //var pic_url = "pic/" + rnd.toString() + ".jpg";
     //var str = "http://kevinfeng.name/test/learn_fit.php?"
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext("2d");
@@ -190,21 +192,24 @@
     var isfit = 1;
     var pnt_p;
     var img = new Image();
-    img.src = {% static markPic %};
+    img.src = "{% static markPic %}";
+    //alert({{ markPic }});
     var pic_w;
     var pic_h;
     var pic_st_x;
     var pic_st_y;
     var pic_ed_x;
     var pic_ed_y;
-    pic_st_x = document.getElementById("pic_start_x");
-    pic_st_y = document.getElementById("pic_start_y");
-    pic_ed_x = document.getElementById("pic_end_x");
-    pic_ed_y = document.getElementById("pic_end_y");
+    pic_st_x = document.getElementById("MainSTX");
+    pic_st_y = document.getElementById("MainSTY");
+    pic_ed_x = document.getElementById("MainEDX");
+    pic_ed_y = document.getElementById("MainEDY");
+    pic_id = document.getElementById("PicId");
 
     img.onload = function () {
         var loading_div = document.getElementById("loading").style.display = "none";
         canvas.style.display = "";
+        pic_id.value = {{ picid }}
         pic_w = img.width;
         pic_h = img.height;
         while (pic_w>1900||pic_h>600){
@@ -217,12 +222,12 @@
         ctx.fillStyle = "rgba(0,0,0,0.2)";
         //alert(pic_h);
         canvas.style.height = pic_h;
-        var form_pic_num = document.getElementById("pic_num");
-        form_pic_num.value=rnd;
-        var  form_pic_w = document.getElementById("pic_w");
-        form_pic_w.value=pic_w
-        var form_pic_h = document.getElementById("pic_h");
-        form_pic_h.value=pic_h;
+{#        var form_pic_num = document.getElementById("pic_num");#}
+{#        form_pic_num.value=rnd;#}
+{#        var  form_pic_w = document.getElementById("pic_w");#}
+{#        form_pic_w.value=pic_w#}
+{#        var form_pic_h = document.getElementById("pic_h");#}
+{#        form_pic_h.value=pic_h;#}
 //alert("please select the person then give a scroe and click confirm!");
     }
     function cnvs_drawimg() {
